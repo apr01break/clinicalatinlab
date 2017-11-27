@@ -14,3 +14,22 @@
 Route::get('/', function () {
     return view('welcome');
 });
+/*
+ **Auth Routes
+ */
+Route::group(['namespace'=>'Auth'],function(){
+  //login
+  Route::get('login',function(){
+    return view('auth.login');
+  })->name('login');
+  //reset password
+  Route::get('reset',function(){
+    return view('auth.reset');
+  })->name('reset');
+});
+/*
+**Backend Routes
+ */
+Route::get('prueba',function(){
+  return view('admin.home.index');
+});
