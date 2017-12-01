@@ -33,3 +33,8 @@ Route::group(['namespace'=>'Auth'],function(){
 Route::get('prueba',function(){
   return view('admin.home.index');
 });
+Route::group(['prefix'=>'pacientes','as'=>'pacientes.'],function(){
+  Route::get('index',function(){
+    return view('admin.pacientes.index');
+  })->name('index');
+});
