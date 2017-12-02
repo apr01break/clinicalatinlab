@@ -21,38 +21,53 @@
           </p>
           <div class="dataTables_wrapper form-inline dt-bootstrap no-footer" id="datatable_wrapper">
             <div class="row">
-              <div class="col-sm-6">
-                <div class="dataTables_length" id="datatable_length">
-                  <label>Mostrar
-                    <select class="form-control input-sm" name="datatable_length" aria-controls="datatable" class="form-control input-sm">
-                      <option value="10">10</option>
-                      <option value="25">25</option>
-                      <option value="50">50</option>
-                      <option value="100">100</option>
-                    </select>
-                    Registros
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div id="datatable_filter" class="dataTables_filter">
-                  <label>Buscar
-                    <input type="search" class="form-control input-sm" placeholder="" aria-controls="datatable">
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12">
-                <table id="datatable" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="datable_info">
+              <div class="table-responsive">
+                <table id="t_pacientes" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                   <thead>
-                    <tr role="row">
-                      <th class="sorting_asc" tabindex="0" aria-controls="datable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width:118px;">Nombres</th>
-                      <th class="sorting_asc" tabindex="0" aria-controls="datable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Age: activate to sort column ascending" style="width:39px;">Edad</th>
-                      <th class="sorting_asc" tabindex="0" aria-controls="datable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="History: activate to sort column ascending" style="width:39px;">Historia</th>
-                      <th class="sorting_asc" tabindex="0" aria-controls="datable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Start date: activate to sort column ascending" style="width:84px;">Fecha de registro</th>
+                    <tr>
+                      <th data-priority="1">Nombre</th>
+                      <th>Historia</th>
+                      <th>DNI</th>
+                      <th>Fecha de Nacimiento</th>
+                      <th>Fecha de Registro</th>
+                      <th data-priority="2">Acciones</th>
                     </tr>
                   </thead>
+                  <tbody>
+                    <tr>
+                      <td>Alexis Jesus Peralta Holyoak</td>
+                      <td>111111</td>
+                      <td>73237155</td>
+                      <td>24/10/1997</td>
+                      <td>20/20/1990</td>
+                      <td><a href="#" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
+                          <a href="#" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+                          <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-close"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>TITO NIEVES</td>
+                      <td>222222</td>
+                      <td>73237155</td>
+                      <td>24/10/1997</td>
+                      <td>20/20/1990</td>
+                      <td><a href="#" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
+                          <a href="#" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+                          <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-close"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>JUANA LA CUBANA</td>
+                      <td>3333333</td>
+                      <td>73237155</td>
+                      <td>24/10/1997</td>
+                      <td>20/20/1990</td>
+                      <td><a href="#" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
+                          <a href="#" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+                          <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-close"></i></a>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
@@ -66,8 +81,17 @@
 
 @section('style')
 <link rel="stylesheet" href="{{asset('css/dataTables.bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/responsive.bootstrap.min.css')}}">
 @endsection
 @section('script')
+<script type="text/javascript" src="{{asset('js/jquery.dataTables.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/dataTables.bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/dataTables.responsive.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/responsive.bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/custom.min.js')}}"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#t_pacientes').DataTable();
+});
+</script>
 @endsection
