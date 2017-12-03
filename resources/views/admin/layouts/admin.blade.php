@@ -14,6 +14,11 @@
         <div class="title_left">
           <h1 class="h3">@yield('title')</h1>
         </div>
+        <div class="title_right">
+            <div class="pull-right">
+                @yield('title-right')
+            </div>
+        </div>
       </div>
       @yield('content')
     </div>
@@ -23,12 +28,3 @@
   </div>
 </div>
 @stop
-
-@section('script')
-<script type="text/javascript" src="{{asset('js/nprogress.js')}}"></script>
-<script type="text/javascript" src="{{asset('js/fastclick.js')}}"></script>
-@endsection
-
-@section('style')
-<link rel="stylesheet" href="{{asset('css/nprogress.css')}}">
-@endsection
