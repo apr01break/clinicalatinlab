@@ -5,6 +5,7 @@ namespace clinicalatinlab;
 use Illuminate\Database\Eloquent\Model;
 use clinicalatinlab\Distrito;
 use clinicalatinlab\Paciente;
+use clinicalatinlab\PacienteOcupacional;
 
 class Empresa extends Model
 {
@@ -24,5 +25,8 @@ class Empresa extends Model
     {
         return $this->hasMany(Paciente::class,'empresa_id');
     }
-    //FALTA
+    public function pacientesOcupacionales()
+    {
+        return $this->hasMany(PacienteOcupacional::class,'empresa_id');
+    }
 }

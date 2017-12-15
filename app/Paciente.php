@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use clinicalatinlab\Empresa;
 use clinicalatinlab\Persona;
 use clinicalatinlab\Solicitud;
+use clinicalatinlab\PacienteOcupacional;
 
 class Paciente extends Model
 {
@@ -28,5 +29,8 @@ class Paciente extends Model
     {
         return $this->belongsTo(Solicitud::class,'paciente_id');
     }
-    //FALTA
+    public function pacienteOcupacional()
+    {
+        return $this->hasOne(PacienteOcupacional::class,'paciente_id');
+    }
 }

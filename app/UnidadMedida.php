@@ -4,6 +4,7 @@ namespace clinicalatinlab;
 
 use Illuminate\Database\Eloquent\Model;
 use clinicalatinlab\Servicio;
+use clinicalatinlab\Producto;
 
 class UnidadMedida extends Model
 {
@@ -17,5 +18,8 @@ class UnidadMedida extends Model
     {
         return $this->hasMany(Servicio::class,'unidad_medida_id');
     }
-    //FALTA
+    public function productos()
+    {
+        return $this->hasMany(Producto::class,'unidad_medida_id');
+    }
 }

@@ -28,7 +28,7 @@ class CreatePacientesOcupacionalesTable extends Migration
             $table->string('gradoInstruccion');
             $table->integer('nroHijosVivos');
             $table->integer('nroDependientes');
-            
+            $table->string('nombreUsuario', 120)->nullable();
             $table->timestamps();
         });
     }
