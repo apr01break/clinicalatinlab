@@ -37,6 +37,7 @@ class CreateDatosClinicosTable extends Migration
             $table->string('visCercaOdCc',20);
             $table->string('visCercaOiSc',20);
             $table->string('visCercaOiCc',20);
+            $table->string('nombreUsuario', 120)->nullable();
             $table->timestamps();
         });
     }

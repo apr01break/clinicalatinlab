@@ -15,8 +15,6 @@ class CreateServiciosTable extends Migration
     {
         Schema::create('servicios', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tipo', 200)->nullable();
-            $table->string('nombreTipo', 200);
             $table->string('descripcion', 100);
             $table->string('breveTarifa', 200);
             $table->integer('sub_clase_id')->unsigned()->nullable();

@@ -18,6 +18,7 @@ class CreateExamenesTable extends Migration
             $table->integer('servicio_id')->unsigned();
             $table->foreign('servicio_id')->references('id')->on('servicios');
             $table->string('descripcion',200);
+            $table->integer('estado');
             $table->string('nombreUsuario', 120)->nullable();
             $table->timestamps();
         });
