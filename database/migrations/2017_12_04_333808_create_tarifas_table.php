@@ -17,10 +17,10 @@ class CreateTarifasTable extends Migration
             $table->increments('id');
             $table->integer('servicio_id')->unsigned();
             $table->foreign('servicio_id')->references('id')->on('servicios');
-            / / /$table->string('tipoFinanciador',70)->nullable();
+            $table->string('tipoPaciente',70)->nullable();
             $table->decimal('precioCalculado', 8, 2);
             $table->decimal('precioExcepcion', 8, 2);
-            / / /$table->string('tarifa', 200)->nullable();
+            $table->string('tarifa', 200);
             $table->string('observacion', 400)->nullable();
             $table->string('nombreUsuario', 120)->nullable();
             $table->timestamps();

@@ -20,6 +20,7 @@ class CreateValoresNormalesTable extends Migration
             $table->string('minimo',100);
             $table->string('maximo',100);
             $table->string('edad',100);
+            $table->string('nombreUsuario',200);
             $table->timestamps();
         });
     }

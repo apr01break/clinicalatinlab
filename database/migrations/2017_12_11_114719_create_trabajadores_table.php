@@ -21,7 +21,11 @@ class CreateTrabajadoresTable extends Migration
             $table->foreign('area_id')->references('id')->on('areas');
             $table->integer('usuario_id')->unsigned();
             $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->integer('tipo_trabajador_id')->unsigned();
+            $table->foreign('tipo_trabajador_id')->references('id')->on('tipos_trabajador');
             $table->integer('estado');
+            $table->string('nombreUsuario');
+            $table->timestamps();
         });
     }
 
