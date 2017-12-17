@@ -5,7 +5,7 @@
 @section('content')
 <div>
   <div class="login_wrapper">
-    <div class="fadeInRight animated">
+    <div class="fadeInRight animated login_form">
       <section class="login_content">
         <form class="" action="" method="post">
           <h1>Iniciar Sesion</h1>

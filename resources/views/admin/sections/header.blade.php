@@ -14,7 +14,7 @@
           </a>
           <ul class="dropdown-menu dropdown-usermenu pull-right">
             <li>
-              <a href="javascript:;">
+              <a href="{{route('login')}}">
                 <i class="fa fa-sign-out pull-right"></i>Cerrar Sesion
               </a>
             </li>
