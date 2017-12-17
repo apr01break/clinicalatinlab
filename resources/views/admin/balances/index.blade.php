@@ -107,27 +107,27 @@
 
 @section('style')
 <!--DataTable-->
-<link rel="stylesheet" href="{{secure_asset('css/dataTables.bootstrap.min.css')}}">
-<link rel="stylesheet" href="{{secure_asset('css/responsive.bootstrap.min.css')}}">
-<link rel="stylesheet" href="{{secure_asset('css/buttons.dataTables.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/dataTables.bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/responsive.bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/buttons.dataTables.min.css')}}">
 <!--nprogress-->
-<link rel="stylesheet" href="{{secure_asset('css/nprogress.css')}}">
+<link rel="stylesheet" href="{{asset('css/nprogress.css')}}">
 <!--Custom theme styles-->
-<link rel="stylesheet" href="{{secure_asset('css/custom.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/custom.min.css')}}">
 
 @endsection
 
 @section('script')
 <!--DataTable-->
-<script type="text/javascript" src="{{secure_asset('js/jquery.dataTables.min.js')}}"></script>
-<script type="text/javascript" src="{{secure_asset('js/dataTables.bootstrap.min.js')}}"></script>
-<script type="text/javascript" src="{{secure_asset('js/dataTables.responsive.min.js')}}"></script>
-<script type="text/javascript" src="{{secure_asset('js/dataTables.buttons.min.js')}}"></script>
-<script type="text/javascript" src="{{secure_asset('js/buttons.html5.min.js')}}"></script>
-<script type="text/javascript" src="{{secure_asset('js/buttons.print.min.js')}}"></script>
-<script type="text/javascript" src="{{secure_asset('js/jszip.min.js')}}"></script>
-<script type="text/javascript" src="{{secure_asset('js/pdfmake.min.js')}}"></script>
-<script type="text/javascript" src="{{secure_asset('js/vfs_fonts.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jquery.dataTables.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/dataTables.bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/dataTables.responsive.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/dataTables.buttons.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/buttons.html5.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/buttons.print.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jszip.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/pdfmake.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/vfs_fonts.js')}}"></script>
 <script type="text/javascript">
   $(document).ready(function(){
     $("#t_data_tables").DataTable({
@@ -158,11 +158,11 @@
   });
 </script>
 <!--bootstrap-datepicker-->
-<script type="text/javascript" src="{{secure_asset('js/bootstrap-datepicker.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
 <!--nprogress-->
-<script type="text/javascript" src="{{secure_asset('js/nprogress.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/nprogress.js')}}"></script>
 <!--Custom theme styles-->
-<script type="text/javascript" src="{{secure_asset('js/custom.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/custom.min.js')}}"></script>
 <!--charts-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/5.0.7/highcharts.js"></script>
 {!!$chart->script()!!}
