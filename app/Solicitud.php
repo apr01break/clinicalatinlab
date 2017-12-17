@@ -28,8 +28,5 @@ class Solicitud extends Model
     {
         return $this->hasMany(ExamenSolicitud::class,'solicitud_id');
     }
-    public function comprobante()
-    {
-        return $this->hasOne(Comprobante::class,'solicitud_id');
-    }
+
 }
