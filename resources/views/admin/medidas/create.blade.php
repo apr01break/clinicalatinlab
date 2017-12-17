@@ -41,18 +41,18 @@
 
 @section('style')
 <!--nprogress-->
-<link rel="stylesheet" href="{{asset('css/nprogress.css')}}">
+<link rel="stylesheet" href="{{secure_asset('css/nprogress.css')}}">
 <!--daterangepicker-->
-<link rel="stylesheet" href="{{asset('css/bootstrap-datepicker.min.css')}}">
+<link rel="stylesheet" href="{{secure_asset('css/bootstrap-datepicker.min.css')}}">
 <!--Custom theme styles-->
-<link rel="stylesheet" href="{{asset('css/custom.min.css')}}">
+<link rel="stylesheet" href="{{secure_asset('css/custom.min.css')}}">
 @endsection
 
 @section('script')
 <!--nprogress-->
-<script type="text/javascript" src="{{asset('js/nprogress.js')}}"></script>
+<script type="text/javascript" src="{{secure_asset('js/nprogress.js')}}"></script>
 <!--bootstrap-datepicker-->
-<script type="text/javascript" src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
+<script type="text/javascript" src="{{secure_asset('js/bootstrap-datepicker.min.js')}}"></script>
 <!--Custom theme styles-->
-<script type="text/javascript" src="{{asset('js/custom.min.js')}}"></script>
+<script type="text/javascript" src="{{secure_asset('js/custom.min.js')}}"></script>
 @endsection
