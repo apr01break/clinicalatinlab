@@ -1,6 +1,6 @@
 @extends('admin.layouts.admin')
 
-@section('title', 'Modificar registro paciente')
+@section('title', 'Visualizar registro paciente')
 @section('title-right')
 <div>
   <label for="num_historia" class="control-label">Numero Historia</label>
@@ -12,7 +12,7 @@
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
       <div class="x_title">
-        <h2>Modificar paciente</h2>
+        <h2>Visualizar paciente</h2>
         <ul class="nav navbar-right panel-toolbox">
           <li>
             <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -23,7 +23,7 @@
       <div class="x_content" style="display: block;">
         <form class="form-horizontal form-label-left" action="" method="post">
           <p class="text-muted font 13 m-b-30">
-            Bienvenido a la seccion de registro de pacientes, asegurate de ingresar los datos correctamente antes de aceptar.
+            Bienvenido a la seccion de visualizacion de pacientes.
           </p>
           <div class="form-group">
             <label for="nombres" class="control-label col-md-3 col-sm-3 col-xs-12">Nombres</label>

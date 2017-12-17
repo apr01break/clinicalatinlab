@@ -89,6 +89,7 @@
 <!--DataTable-->
 <link rel="stylesheet" href="{{asset('css/dataTables.bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('css/responsive.bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/buttons.dataTables.min.css')}}">
 <!--nprogress-->
 <link rel="stylesheet" href="{{asset('css/nprogress.css')}}">
 <!--Custom theme styles-->
@@ -101,6 +102,12 @@
 <script type="text/javascript" src="{{asset('js/dataTables.bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/dataTables.responsive.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/responsive.bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/dataTables.buttons.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/buttons.html5.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/buttons.print.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jszip.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/pdfmake.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/vfs_fonts.js')}}"></script>
 <!--bootstrap-datepicker-->
 <script type="text/javascript" src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
 <!--nprogress-->
@@ -108,6 +115,31 @@
 <!--Custom theme styles-->
 <script type="text/javascript" src="{{asset('js/custom.min.js')}}"></script>
 <script type="text/javascript">
-  $(document).ready(function(){$("#t_data_tables").DataTable()});
+  $(document).ready(function(){$("#t_data_tables").DataTable({
+    dom: 'Bfrtip',
+    buttons:[{
+      extend: 'pdf',
+         footer: true,
+         title:'Reporte de pacientes',
+         exportOptions: {
+              columns: [0,1,2,3,4]
+          }
+    },
+    {
+          extend: 'excel',
+          title:'Reporte de pacientes',
+          exportOptions: {
+              columns: [0,1,2,3.4]
+           }
+    },
+    {
+          extend: 'print',
+          title:'Reporte de pacientes',
+          exportOptions: {
+              columns: [0,1,2,3,4]
+           }
+    }]
+  });
+});
 </script>
 @endsection

@@ -104,8 +104,14 @@
             <label for="localidad" class="control-label col-md-3 col-sm-3 col-xs-12">Localidad</label>
             <div class="col-md-2 col-sm-2 col-xs-12">
               <select class="form-control" name="">
-                <option value="">DNI</option>
-                <option value="">Pasaporte</option>
+                <option value="">AAHH</option>
+                <option value="">Asoc.</option>
+                <option value="">Caserio</option>
+                <option value="">Comite</option>
+                <option value="">Cooperativa</option>
+                <option value="">PPJJ</option>
+                <option value="">Urb</option>
+                <option value="">Villorio</option>
               </select>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12" class="form-control">
