@@ -79,26 +79,26 @@
 
 @section('style')
 <!--DataTable-->
-<link rel="stylesheet" href="{{secure_asset('css/dataTables.bootstrap.min.css')}}">
-<link rel="stylesheet" href="{{secure_asset('css/responsive.bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/dataTables.bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/responsive.bootstrap.min.css')}}">
 <!--nprogress-->
-<link rel="stylesheet" href="{{secure_asset('css/nprogress.css')}}">
+<link rel="stylesheet" href="{{asset('css/nprogress.css')}}">
 <!--Custom theme styles-->
-<link rel="stylesheet" href="{{secure_asset('css/custom.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/custom.min.css')}}">
 @endsection
 
 @section('script')
 <!--DataTable-->
-<script type="text/javascript" src="{{secure_asset('js/jquery.dataTables.min.js')}}"></script>
-<script type="text/javascript" src="{{secure_asset('js/dataTables.bootstrap.min.js')}}"></script>
-<script type="text/javascript" src="{{secure_asset('js/dataTables.responsive.min.js')}}"></script>
-<script type="text/javascript" src="{{secure_asset('js/responsive.bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jquery.dataTables.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/dataTables.bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/dataTables.responsive.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/responsive.bootstrap.min.js')}}"></script>
 <!--bootstrap-datepicker-->
-<script type="text/javascript" src="{{secure_asset('js/bootstrap-datepicker.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
 <!--nprogress-->
-<script type="text/javascript" src="{{secure_asset('js/nprogress.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/nprogress.js')}}"></script>
 <!--Custom theme styles-->
-<script type="text/javascript" src="{{secure_asset('js/custom.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/custom.min.js')}}"></script>
 <script type="text/javascript">
   $(document).ready(function(){$("#t_data_tables").DataTable()});
 </script>
