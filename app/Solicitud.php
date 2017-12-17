@@ -5,7 +5,6 @@ namespace clinicalatinlab;
 use Illuminate\Database\Eloquent\Model;
 use clinicalatinlab\Medico;
 use clinicalatinlab\Paciente;
-use clinicalatinlab\Comprobante;
 use clinicalatinlab\ExamenSolicitud;
 
 class Solicitud extends Model
