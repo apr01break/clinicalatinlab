@@ -15,8 +15,6 @@ class CreateComprobantesTable extends Migration
     {
         Schema::create('comprobantes', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('solicitud_id')->unsigned();
-            $table->foreign('solicitud_id')->references('id')->on('solicitudes');
             $table->integer('area_id')->unsigned();
             $table->foreign('area_id')->references('id')->on('areas');
             $table->boolean('verificaHc');

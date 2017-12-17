@@ -26,7 +26,9 @@ class CreateResultadosTable extends Migration
             $table->string('unidad',200);
             $table->string('rango',200);
             $table->string('comentario',500);
-
+            $table->integer('comprobante_id')->unsigned()->nullable();
+            $table->foreign('comprobante_id')->references('id')->on('comprobantes');
+            $table->string('nombreUsuario',200);
             $table->timestamps();
 
         });

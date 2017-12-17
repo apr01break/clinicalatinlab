@@ -27,4 +27,8 @@ class ExamenSolicitud extends Model
     {
         return $this->belongsTo(Trabajador::class,'trabajador_id');
     }
+    public function examenesSolicitud()
+    {
+        return $this->belongsTo(ExamenSolicitud::class,'comprobante_id');
+    }
 }

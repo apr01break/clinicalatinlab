@@ -4,7 +4,7 @@ namespace clinicalatinlab;
 
 use Illuminate\Database\Eloquent\Model;
 use clinicalatinlab\Area;
-use clinicalatinlab\Solicitud;
+use clinicalatinlab\ExamenSolicitud;
 
 class Comprobante extends Model
 {
@@ -12,15 +12,15 @@ class Comprobante extends Model
     protected $primaryKey = 'id';
     public $timestamps    = true;
     protected $fillable   = [
-        'solicitud_id','area_id','verificaHc','fechaHsp','condPago','numero','serie','tipo','igv','pagoCon'
+        'area_id','verificaHc','fechaHsp','condPago','numero','serie','tipo','igv','pagoCon'
         ,'vuelto','neto'
     ];
-    public function solicitud()
-    {
-        return $this->belongsTo(Solicitud::class,'solicitud_id');
-    }
     public function area()
     {
         return $this->belongsTo(Area::class,'area_id');
+    }
+    public function examenesSolicitud()
+    {
+        return $this->hasMany(ExamenSolicitud::class,'comprobante_id');
     }
 }
