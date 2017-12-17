@@ -101,6 +101,11 @@
                 <ul class="nav child_menu">
                   <li>
                     <a href="javascript:;">
+                      Solicitudes
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
                       Inventario
                     </a>
                   </li>
@@ -112,6 +117,11 @@
                   <li>
                     <a href="javascript:;">
                       Examenes
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      Resultados
                     </a>
                   </li>
                 </ul>
