@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use clinicalatinlab\Examen;
 use clinicalatinlab\Solicitud;
 use clinicalatinlab\Trabajador;
+use clinicalatinlab\Comprobante;
 
 class ExamenSolicitud extends Model
 {
@@ -14,6 +15,7 @@ class ExamenSolicitud extends Model
     public $timestamps    = true;
     protected $fillable   = [
         'examen_id','solicitud_id','trabajador_id','resultado','descripcion','unidad','rango','comentario'
+        ,'comprobante_id','nombreUsuario'
     ];
     public function examen()
     {
@@ -27,8 +29,8 @@ class ExamenSolicitud extends Model
     {
         return $this->belongsTo(Trabajador::class,'trabajador_id');
     }
-    public function examenesSolicitud()
+    public function comprobante()
     {
-        return $this->belongsTo(ExamenSolicitud::class,'comprobante_id');
+        return $this->belongsTo(Comprobante::class,'comprobante_id');
     }
 }
