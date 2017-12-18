@@ -120,6 +120,18 @@ Route::group(['prefix'=>'subclases','as'=>'subclases.'],function(){
     return view('admin.subclases.show');
   })->name('show');
 });
+/*SUBCLASES*/
+Route::group(['prefix'=>'cpts','as'=>'cpts.'],function(){
+  Route::get('/',function(){
+    return view('admin.cpts.index');
+  })->name('index');
+  Route::get('create',function(){
+    return view('admin.cpts.create');
+  })->name('create');
+  Route::get('update',function(){
+    return view('admin.cpts.update');
+  })->name('update');
+});
 /*BALANCE*/
 Route::group(['prefix'=>'balances','as'=>'balances.'],function(){
   Route::get('/','BalanceController@index')->name('index');
@@ -178,7 +190,7 @@ Route::group(['prefix'=>'comprobantes','as'=>'comprobantes.'],function(){
     return view('admin.comprobantes.show');
   })->name('show');
 });
-/*COMPROBANTES*/
+/*CPTS*/
 Route::group(['prefix'=>'cpts','as'=>'cpts.'],function(){
   Route::get('/',function(){
     return view('admin.cpts.index');
@@ -191,5 +203,50 @@ Route::group(['prefix'=>'cpts','as'=>'cpts.'],function(){
   })->name('update');
   Route::get('show',function(){
     return view('admin.cpts.show');
+  })->name('show');
+});
+/*INCENTIVO*/
+Route::group(['prefix'=>'incentivos','as'=>'incentivos.'],function(){
+  Route::get('/',function(){
+    return view('admin.incentivos.index');
+  })->name('index');
+  Route::get('create',function(){
+    return view('admin.incentivos.create');
+  })->name('create');
+  Route::get('update',function(){
+    return view('admin.incentivos.update');
+  })->name('update');
+  Route::get('show',function(){
+    return view('admin.incentivos.show');
+  })->name('show');
+});
+/*DESCUENTO*/
+Route::group(['prefix'=>'descuentos','as'=>'descuentos.'],function(){
+  Route::get('/',function(){
+    return view('admin.descuentos.index');
+  })->name('index');
+  Route::get('create',function(){
+    return view('admin.descuentos.create');
+  })->name('create');
+  Route::get('update',function(){
+    return view('admin.descuentos.update');
+  })->name('update');
+  Route::get('show',function(){
+    return view('admin.descuentos.show');
+  })->name('show');
+});
+/*DESCUENTO*/
+Route::group(['prefix'=>'sueldos','as'=>'sueldos.'],function(){
+  Route::get('/',function(){
+    return view('admin.sueldos.index');
+  })->name('index');
+  Route::get('create',function(){
+    return view('admin.sueldos.create');
+  })->name('create');
+  Route::get('update',function(){
+    return view('admin.sueldos.update');
+  })->name('update');
+  Route::get('show',function(){
+    return view('admin.sueldos.show');
   })->name('show');
 });

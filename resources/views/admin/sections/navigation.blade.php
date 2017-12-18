@@ -46,6 +46,11 @@
                     </a>
                   </li>
                   <li>
+                    <a href="{{route('cpts.index')}}">
+                      Cpts
+                    </a>
+                  </li>
+                  <li>
                     <a href="{{route('medidas.index')}}">
                       Unidades de medida
                     </a>
@@ -161,17 +166,17 @@
                     </a>
                   </li>
                   <li>
-                    <a href="javascript:;">
+                    <a href="{{route('sueldos.index')}}">
                       Sueldos
                     </a>
                   </li>
                   <li>
-                    <a href="javascript:;">
+                    <a href="{{route('incentivos.index')}}">
                       Incentivos
                     </a>
                   </li>
                   <li>
-                    <a href="javascript:;">
+                    <a href="{{route('descuentos.index')}}">
                       Descuentos
                     </a>
                   </li>
