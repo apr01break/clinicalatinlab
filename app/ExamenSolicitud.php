@@ -7,6 +7,7 @@ use clinicalatinlab\Examen;
 use clinicalatinlab\Solicitud;
 use clinicalatinlab\Trabajador;
 use clinicalatinlab\Comprobante;
+use clinicalatinlab\MuestraExamenSolicitud;
 
 class ExamenSolicitud extends Model
 {
@@ -28,6 +29,10 @@ class ExamenSolicitud extends Model
     public function trabajador()
     {
         return $this->belongsTo(Trabajador::class,'trabajador_id');
+    }
+    public function muestrasExamenesSolicitud()
+    {
+        return $this->hasMany(MuestraExamenSolicitud::class,'examen_solicitud_id');
     }
     public function comprobante()
     {
