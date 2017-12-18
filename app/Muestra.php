@@ -3,18 +3,18 @@
 namespace clinicalatinlab;
 
 use Illuminate\Database\Eloquent\Model;
-use clinicalatinlab\MuestraServicio;
+use clinicalatinlab\MuestraExamenSolicitud;
 
 class Muestra extends Model
 {
     protected $table      = 'muestras';
     protected $primaryKey = 'id';
-    public $timestamps    = false;
+    public $timestamps    = true;
     protected $fillable   = [
-        'nombre'
+        'nombre','nombreUsuario'
     ];
-    public function muestrasServicios()
+    public function muestrasExamenesSolicitud()
     {
-        return $this->hasMany(MuestraServicio::class,'muestra_id');
+        return $this->hasMany(MuestraExamenSolicitud::class,'muestra_id');
     }
 }

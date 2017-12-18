@@ -193,3 +193,18 @@ Route::group(['prefix'=>'cpts','as'=>'cpts.'],function(){
     return view('admin.cpts.show');
   })->name('show');
 });
+/*PACIENTE OCUPACIONAL*/
+Route::group(['prefix'=>'ocupacional','as'=>'ocupacional.'],function(){
+  Route::get('/',function(){
+    return view('admin.ocupacional.index');
+  })->name('index');
+  Route::get('create',function(){
+    return view('admin.ocupacional.create');
+  })->name('create');
+  Route::get('update',function(){
+    return view('admin.ocupacional.update');
+  })->name('update');
+  Route::get('show',function(){
+    return view('admin.ocupacional.show');
+  })->name('show');
+});

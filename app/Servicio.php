@@ -9,7 +9,6 @@ use clinicalatinlab\Tarifa;
 use clinicalatinlab\SubClase;
 use clinicalatinlab\TipoAydDiag;
 use clinicalatinlab\UnidadMedida;
-use clinicalatinlab\MuestraServicio;
 use clinicalatinlab\Examen;
 
 class Servicio extends Model
@@ -20,7 +19,9 @@ class Servicio extends Model
     protected $fillable   = [
         'descripcion','breveTarifa','sub_clase_id','unidad_medida_id','area_id','importeBase','veterinaria'
         ,'categSocial','categTemporal','tarifaLibre','estadoAtencion','igv','tipo_ayd_diag_id','cpt_id'
-        ,'observacion','estado','nombreUsuario'
+        ,'observacion','precioCalculadoParticular','precioCalculadoConvenio'
+        ,'precioExcepcionParticular','precioExcepcionConvenio','tarifaParticular','tarifaConvenio'
+        ,'observacionParticular','observacionConvenio','estado','nombreUsuario'
     ];
     public function subclase()
     {
@@ -42,15 +43,7 @@ class Servicio extends Model
     {
         return $this->belongsTo(UnidadMedida::class,'unidad_medida_id');
     }
-    public function tarifas()
-    {
-        return $this->hasMany(Tarifa::class,'servicio_id');
-    }
-    public function muestrasServicios()
-    {
-        return $this->hasMany(MuestraServicio::class,'servicio_id');
-    }
-    public function muestrasServicios()
+    public function examen()
     {
         return $this->hasOne(Examen::class,'servicio_id');
     }

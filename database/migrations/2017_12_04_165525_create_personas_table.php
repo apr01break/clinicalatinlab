@@ -24,7 +24,7 @@ class CreatePersonasTable extends Migration
             $table->foreign('lugarNacimiento_id')->references('id')->on('distritos');
             $table->string('sexo', 70);
             $table->string('tipoDocum', 50);
-            $table->string('nroDocum', 50);
+            $table->string('nroDocum', 50)->unique();
             $table->string('direccion', 200)->nullable();
             $table->string('nroDirecc', 20)->nullable();
             $table->string('intDirecc', 20)->nullable();
