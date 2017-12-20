@@ -35,6 +35,14 @@ class CreateServiciosTable extends Migration
             $table->integer('cpt_id')->unsigned()->nullable();
             $table->foreign('cpt_id')->references('id')->on('cpts');
             $table->string('observacion', 400)->nullable();
+            $table->string('precioCalculadoParticular', 400);
+            $table->string('precioCalculadoConvenio', 400);
+            $table->string('precioExcepcionParticular', 400);
+            $table->string('precioExcepcionConvenio', 400);
+            $table->string('tarifaParticular', 400);
+            $table->string('tarifaConvenio', 400);
+            $table->string('observacionParticular', 400);
+            $table->string('observacionConvenio', 400);
             $table->integer('estado');
             $table->string('nombreUsuario', 120)->nullable();
             $table->timestamps();

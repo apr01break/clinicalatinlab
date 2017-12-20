@@ -10,7 +10,7 @@ use clinicalatinlab\IncentivoTrabajador;
 
 class Sueldo extends Model
 {
-    protected $table      = 'solicitudes';
+    protected $table      = 'sueldos';
     protected $primaryKey = 'id';
     public $timestamps    = true;
     protected $fillable   = [
