@@ -7,10 +7,10 @@
         <h4 class="modal-title" id="">Eliminar Registro</h4>
       </div>
       <div class="modal-body">
-        <h4>¿Esta seguro que desea eliminar el registro de solicitud?</h4>
-        <p>Esta acción cambiara el estado del registro de la solicitud NOMBRE COMPLETO a no disponible, por lo que no se podran realizar ninguna acción relacionada al paciente</p>
-        <p>Nombre de la solicitud: NOMBRE COMPLETO</p>
-        <p>DNI: DNI</p>
+        <h4>¿Esta seguro que desea eliminar el registro del usuario?</h4>
+        <p>Esta acción cambiara el estado del registro del usuario NOMBRE COMPLETO a no disponible, por lo que no se podran realizar ninguna acción relacionada al paciente</p>
+        <p>Nombre del usuario: NOMBRE COMPLETO</p>
+        <p>Usuario: DNI</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger"name="button">Eliminar</button>
