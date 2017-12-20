@@ -338,6 +338,8 @@ Route::group(['prefix'=>'materiales','as'=>'materiales.'],function(){
   })->name('update');
   Route::get('show',function(){
     return view('admin.materiales.show');
+  })->name('show');
+});
 /*PACIENTE OCUPACIONAL*/
 Route::group(['prefix'=>'ocupacional','as'=>'ocupacional.'],function(){
     Route::group(['prefix'=>'empresa','as'=>'empresa.'],function(){
