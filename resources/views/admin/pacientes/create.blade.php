@@ -39,9 +39,21 @@
           </div>
           <div class="form-group">
             <label for="fecha_nacimiento" class="control-label col-md-3 col-sm-3 col-xs-12">Fecha de Nacimiento</label>
-            <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="col-md-3 col-sm-3 col-xs-12">
               <input type="text" name="" id="dtp1" class="form-control has-feedback-left" data-date-end-date="0d">
               <span class="fa fa-calendar-o form-control-feedback left"></span>
+            </div>
+            <div class="col-md-1 col-sm-1 col-xs-12">
+                <input type="number" name="" class="form-control has-feedback-right">
+                <span class="form-control-feedback right">AA</span>
+            </div>
+            <div class="col-md-1 col-sm-1 col-xs-12">
+                <input type="number" name="" class="form-control has-feedback-right">
+                <span class="form-control-feedback right">MM</span>
+            </div>
+            <div class="col-md-1 col-sm-1 col-xs-12">
+                <input type="number" name="" class="form-control has-feedback-right">
+                <span class="form-control-feedback right">DD</span>
             </div>
           </div>
           <div class="form-group">

@@ -1,4 +1,4 @@
-<div class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true"  id="bs-delete-modal-lg" style="display:none;">
+<div class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true"  id="bs-delete-incentivo-modal-lg" style="display:none;">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -7,10 +7,8 @@
         <h4 class="modal-title" id="">Eliminar Registro</h4>
       </div>
       <div class="modal-body">
-        <h4>¿Esta seguro que desea eliminar el registro de solicitud?</h4>
-        <p>Esta acción cambiara el estado del registro de la solicitud NOMBRE COMPLETO a no disponible, por lo que no se podran realizar ninguna acción relacionada al paciente</p>
-        <p>Nombre de la solicitud: NOMBRE COMPLETO</p>
-        <p>DNI: DNI</p>
+        <h4>¿Esta seguro que desea eliminar el registro del incentivo?</h4>
+        <p>Estas a punto de eliminar este incentivo del Trabajador: NOMBRE COMPLETO</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger"name="button">Eliminar</button>

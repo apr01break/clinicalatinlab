@@ -250,3 +250,93 @@ Route::group(['prefix'=>'sueldos','as'=>'sueldos.'],function(){
     return view('admin.sueldos.show');
   })->name('show');
 });
+/*USUARIOS*/
+Route::group(['prefix'=>'usuarios','as'=>'usuarios.'],function(){
+  Route::get('/',function(){
+    return view('admin.usuarios.index');
+  })->name('index');
+  Route::get('create',function(){
+    return view('admin.usuarios.create');
+  })->name('create');
+  Route::get('update',function(){
+    return view('admin.usuarios.update');
+  })->name('update');
+  Route::get('show',function(){
+    return view('admin.usuarios.show');
+  })->name('show');
+});
+/*SOLICITUDES*/
+Route::group(['prefix'=>'solicitudes','as'=>'solicitudes.'],function(){
+  Route::get('/',function(){
+    return view('admin.solicitudes.index');
+  })->name('index');
+  Route::get('create',function(){
+    return view('admin.solicitudes.create');
+  })->name('create');
+  Route::get('update',function(){
+    return view('admin.solicitudes.update');
+  })->name('update');
+  Route::get('show',function(){
+    return view('admin.solicitudes.show');
+  })->name('show');
+});
+/*EXAMENES*/
+Route::group(['prefix'=>'examenes','as'=>'examenes.'],function(){
+  Route::get('/',function(){
+    return view('admin.examenes.index');
+  })->name('index');
+  Route::get('create',function(){
+    return view('admin.examenes.create');
+  })->name('create');
+  Route::get('update',function(){
+    return view('admin.examenes.update');
+  })->name('update');
+  Route::get('show',function(){
+    return view('admin.examenes.show');
+  })->name('show');
+});
+/*INVENTARIO*/
+Route::group(['prefix'=>'inventarios','as'=>'inventarios.'],function(){
+  Route::get('/',function(){
+    return view('admin.inventarios.index');
+  })->name('index');
+  Route::get('create',function(){
+    return view('admin.inventarios.create');
+  })->name('create');
+  Route::get('update',function(){
+    return view('admin.inventarios.update');
+  })->name('update');
+  Route::get('show',function(){
+    return view('admin.inventarios.show');
+  })->name('show');
+});
+/*INVENTARIO*/
+Route::group(['prefix'=>'normales','as'=>'normales.'],function(){
+  Route::get('/',function(){
+    return view('admin.normales.index');
+  })->name('index');
+  Route::get('create',function(){
+    return view('admin.normales.create');
+  })->name('create');
+  Route::get('update',function(){
+    return view('admin.normales.update');
+  })->name('update');
+  Route::get('show',function(){
+    return view('admin.normales.show');
+  })->name('show');
+});
+/*MATERIALES*/
+Route::group(['prefix'=>'materiales','as'=>'materiales.'],function(){
+  Route::get('/',function(){
+    return view('admin.materiales.index');
+  })->name('index');
+  Route::get('create',function(){
+    return view('admin.materiales.create');
+  })->name('create');
+  Route::get('update',function(){
+    return view('admin.materiales.update');
+  })->name('update');
+  Route::get('show',function(){
+    return view('admin.materiales.show');
+  })->name('show');
+});

@@ -1,10 +1,5 @@
 @extends('admin.layouts.admin')
 @section('title', 'Comprobantes')
-@section('title-right')
-<div>
-  <a href="{{route('comprobantes.create')}}" class="btn btn-primary">Crear comprobante</a>
-</div>
-@endsection
 
 @section('content')
 <div class="row">

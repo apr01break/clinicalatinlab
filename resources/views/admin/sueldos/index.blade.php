@@ -50,7 +50,7 @@
                       <td>0</td>
                       <td>21/12/2017</td>
                       <td>POR PAGAR</td>
-                      <td><a href="{{route('pacientes.show')}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
+                      <td><a href="{{route('sueldos.show')}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
                           <a href="{{route('sueldos.update')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
                           <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
                       </td>

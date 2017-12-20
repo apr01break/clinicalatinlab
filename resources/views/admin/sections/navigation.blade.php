@@ -55,6 +55,16 @@
                       Unidades de medida
                     </a>
                   </li>
+                  <li>
+                    <a href="{{route('areas.index')}}">
+                      Areas
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{route('normales.index')}}">
+                      Valores normales
+                    </a>
+                  </li>
                 </ul>
             </li>
             <li>
@@ -66,6 +76,11 @@
                   <li>
                     <a href="{{route('pacientes.index')}}">
                       Pacientes
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{route('ocupacional.index')}}">
+                      Ocupacional
                     </a>
                   </li>
                   <li>
@@ -81,11 +96,6 @@
                     Sistema <span class="fa fa-chevron-down"></span>
                 </a>
                 <ul class="nav child_menu">
-                  <li>
-                    <a href="{{route('empleados.index')}}">
-                      Empleados
-                    </a>
-                  </li>
                   <li>
                     <a href="javascript:;">
                       Medicos
@@ -105,28 +115,13 @@
                 </a>
                 <ul class="nav child_menu">
                   <li>
-                    <a href="javascript:;">
+                    <a href="{{route('solicitudes.index')}}">
                       Solicitudes
                     </a>
                   </li>
                   <li>
-                    <a href="javascript:;">
-                      Inventario
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript:;">
-                      Muestras
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript:;">
+                    <a href="{{route('examenes.index')}}">
                       Examenes
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript:;">
-                      Resultados
                     </a>
                   </li>
                 </ul>
@@ -143,8 +138,13 @@
                     </a>
                   </li>
                   <li>
-                    <a href="javascript:;">
+                    <a href="{{route('financieras.index')}}">
                       Razones financieras
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{route('inventarios.index')}}">
+                      Inventario
                     </a>
                   </li>
                 </ul>
@@ -156,13 +156,13 @@
                 </a>
                 <ul class="nav child_menu">
                   <li>
-                    <a href="javascript:;">
+                    <a href="{{route('usuarios.index')}}">
                       Usuarios
                     </a>
                   </li>
                   <li>
-                    <a href="javascript:;">
-                      Trabajadores
+                    <a href="{{route('empleados.index')}}">
+                      Empleados
                     </a>
                   </li>
                   <li>

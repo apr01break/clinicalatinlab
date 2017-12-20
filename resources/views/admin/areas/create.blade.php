@@ -43,9 +43,18 @@
                   <option value="3">Thomas prieto</option>
                 </select>
                 <span class="input-group-btn">
-                    <a href="{{route('responsables.create')}}" class="btn btn-default"><i class="fa fa-plus"></i> </a>
+                    <a href="{{route('empleados.create')}}" class="btn btn-default"><i class="fa fa-plus"></i> </a>
                 </span>
             </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="nombres" class="control-label col-md-3 col-sm-3 col-xs-12">Tipo de Servicio</label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <select class="form-control" name="">
+                <option value="">Servicio Ejecutante</option>
+                <option value="">Servicio Solicitante</option>
+              </select>
             </div>
           </div>
           <div class="form-group">
