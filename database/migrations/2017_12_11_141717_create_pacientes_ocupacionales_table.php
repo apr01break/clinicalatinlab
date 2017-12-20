@@ -20,6 +20,9 @@ class CreatePacientesOcupacionalesTable extends Migration
             $table->integer('empresa_id')->unsigned()->nullable();
             $table->foreign('empresa_id')->references('id')->on('empresas');
             $table->string('ocupacion');
+            $table->string('tipoEvaluacion1',100);
+            $table->string('tipoEvaluacion2',100);
+            $table->date('fechaEvaluacion');
             $table->boolean('residenciaOcupacion');
             $table->string('tiempoResidencia');
             $table->string('seguro');
@@ -28,6 +31,7 @@ class CreatePacientesOcupacionalesTable extends Migration
             $table->string('gradoInstruccion');
             $table->integer('nroHijosVivos');
             $table->integer('nroDependientes');
+            $table->integer('estado');
             $table->string('nombreUsuario', 120)->nullable();
             $table->timestamps();
         });

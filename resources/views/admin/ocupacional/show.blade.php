@@ -1,52 +1,77 @@
-@extends('admin.layouts.admin')
+    @extends('admin.layouts.admin')
 
-@section('title', 'Pacientes Ocupacionales')
-@section('content')
+    @section('title', 'Pacientes Ocupacionales')
+    @section('content')
 <div class="row">
-<div class="col-md-12 col-sm-12 col-xs-12">
+  <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
-        <div class="x_title">
-            <h2>Registrar paciente ocupacional</h2>
-            <ul class="nav navbar-right panel-toolbox">
-                <li>
-                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                </li>
-            </ul>
+      <div class="x_title">
+        <h2>Datos de paciente ocupacional</h2>
+        <ul class="nav navbar-right panel-toolbox">
+          <li>
+            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+          </li>
+        </ul>
         <div class="clearfix"></div>
-    </div>
-    <div class="x_content" style="display: block;">
+      </div>
+      <div class="x_content" style="display: block;">
         <form class="form-horizontal form-label-left" action="" method="post">
-            <p class="text-muted font 13 m-b-30">
-                Bienvenido a la seccion de registro de pacientes ocupacionales, asegurate de ingresar los datos correctamente antes de aceptar.
-            </p>
-            <div class="form-group">
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <label for="pacientes">Paciente</label>
+          <div class="form-group">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <label for="pacientes">Paciente</label>
                     <input type="text" name="" class="form-control" value="111111 Alexis Jesus Peralta Holyoak" readonly>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-12">
                     <label for="empresas">Empresa</label>
                     <input type="text" name="" class="form-control" value="333333 Inversiones Chicken" readonly>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <label for="empresas">Ocupacion</label>
-                    <input type="text" name="" class="form-control" value="Operario" readonly>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-12">
-                  <label for="residenciaOcupacion">Residencia en el trabajo</label>
-                  <div class="input-group">
-                    <input type="checkbox" class="bts-togg" name="hc[]"  data-on="Si" data-off="No"/ disabled>
                   </div>
                 </div>
+                <div class="form-group">
+                  <div class="col-md-4 col-sm-4 col-xs-12">
+                    <label for="tipoEvaluacion1">Tipo Evaluación</label>
+                    <select class="form-control" name="" disabled>
+                      <option value="" >Pre-Ocupacional</option>
+                      <option value="">Ocupacional</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-12">
+                    <label for="tipoEvaluacion2">Tipo Evaluación</label>
+                    <select class="form-control" name="" disabled>
+                      <option value="">Ingreso</option>
+                      <option value="">Periódico</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-12">
+                    <label for="fechaEvaluacion">  Fecha de evaluación</label>
+                    <div class="input-group">
+                        <input type="text" name="" readonly value="10/12/2017" class="form-control has-feedback-left" data-date-end-date="0d">
+                        <span class="fa fa-calendar-o form-control-feedback left"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-4 col-sm-4 col-xs-12">
+                    <label for="empresas">Ocupacion</label>
+                    <input type="text" name="" class="form-control" value="Operario" readonly>
+                  </div>
+                  <div class="col-md-2 col-sm-2 col-xs-12">
+                    <label for="residenciaOcupacion">Residencia en el trabajo</label>
+                    <div class="input-group">
+                      <input type="checkbox" class="bts-togg" name="hc[]"  data-on="Si" data-off="No"/ disabled>
+                    </div>
+                  </div>
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <label for="tiempoResidencia">Tiempo de residencia</label>
                     <input type="text" class="form-control" name="" value="" readonly>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <label for="seguro">Seguro</label>
-                    <input type="text" name="" value="EsSalud" class="form-control" readonly>
+                    <select class="form-control" name="" disabled>
+                      <option value="">EsSalud</option>
+                      <option value="">EPS</option>
+                      <option value="">SCTR</option>
+                      <option value="">Otro</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group">
@@ -56,11 +81,24 @@
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <label for="estadoCivil">Estado civil</label>
-                    <input type="text" name="" value="Casado" class="form-control" readonly>
+                    <select class="form-control" name="" disabled>
+                      <option value="">Soltero</option>
+                      <option value="" selected>Casado</option>
+                      <option value="">Conviviente</option>
+                      <option value="">Viudo</option>
+                      <option value="">Divorciado</option>
+                    </select>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <label for="gradoInstruccion">Grado de instrucción</label>
-                    <input type="text" name="" value="Secundaria Completa" class="form-control" readonly>
+                    <select class="form-control" name="" disabled>
+                      <option value="">Primaria incompleta</option>
+                      <option value="">Primaria completa</option>
+                      <option value="" selected>Secundaria incompleta</option>
+                      <option value="">Secundaria completa</option>
+                      <option value="">Tercio superios incompleto</option>
+                      <option value="">Tercio superios completo</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group">
@@ -74,19 +112,196 @@
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-md-10 col-sm-10 col-xs-12">
-                    <a href="{{route('ocupacional.index')}}" class="btn btn-danger">Cancelar</a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-12">
-                    <div class="col-md-4 col-sm-4 col-xs-12"></div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <button type="button" name="button" type="submit" class="btn btn-primary">Continuar</button>
-                    </div>
-                </div>
+              <div class="col-md-10 col-sm-10 col-xs-12"></div>
+              <div class="col-md-2 col-sm-2 col-xs-12">
+                <button type="button" class="btn btn-warning btn-sm">Editar</button>
+                <button type="button" name="button" type="submit" class="btn btn-success btn-sm" disabled>Guardar</button>
+              </div>
             </div>
         </form>
     </div>
-</div>
+    </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Empresas anteriores</h2>
+                <ul class="nav navbar-right panel-toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" style="display: block;">
+                <form class="form-horizontal form-label-left" action="" method="post">
+                    <div class="input_fields_wrap">
+                        <div class="form-group">
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <label for="nombre">Nombre de la empresa</label>
+                                <input type="text" class="form-control" name="" value="Inversiones JB" readonly>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <label for="areaTrabajo">Área de trabajo</label>
+                                <input type="text" class="form-control" name="" value="Reparto" readonly>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <label for="ocupacion">Ocupación</label>
+                                <input type="text" class="form-control" name="" value="Repartidor" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                <label for="fecha">Fecha de inicio</label>
+                                <div class="input-group">
+                                    <input type="text" name="" value="03/01/2017" class="form-control has-feedback-left" data-date-today-highlight="true" readonly>
+                                    <span class="fa fa-calendar-o form-control-feedback left"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                <label for="fechaFin">Fecha de término</label>
+                                <div class="input-group">
+                                    <input type="text" name="" value="03/10/2017" class="form-control has-feedback-left" data-date-today-highlight="true" readonly>
+                                <span class="fa fa-calendar-o form-control-feedback left"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+                            <label for="exposicion">Exposición</label>
+                            <div class="input-group">
+                                <input type="checkbox" class="bts-togg" name="exposicion[]"  data-on="Si" data-off="No" disabled/>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+                            <label for="epp">EPP</label>
+                            <div class="input-group">
+                                <input type="checkbox" class="bts-togg" name="epp[]"  data-on="Si" data-off="No" disabled/>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+                          <label for=""> </label>
+                          <div class="">
+                            <button type="button" class="btn btn-warning btn-sm">Editar</button>
+                            <button type="button" name="button" type="submit" class="btn btn-success btn-sm" disabled>Guardar</button>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="form-group">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <label for="nombre">Nombre de la empresa</label>
+                            <input type="text" class="form-control" name="" value="Importaciones HC" readonly>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <label for="areaTrabajo">Área de trabajo</label>
+                            <input type="text" class="form-control" name="" value="Planta" readonly>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <label for="ocupacion">Ocupación</label>
+                            <input type="text" class="form-control" name="" value="Supervisor" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3 col-sm-3 col-xs-12">
+                            <label for="fecha">Fecha de inicio</label>
+                            <div class="input-group">
+                                <input type="text" name="" value="12/04/2016" class="form-control has-feedback-left" data-date-today-highlight="true" readonly>
+                                <span class="fa fa-calendar-o form-control-feedback left"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-12">
+                            <label for="fechaFin">Fecha de término</label>
+                            <div class="input-group">
+                                <input type="text" name="" value="12/10/2016" class="form-control has-feedback-left" data-date-today-highlight="true" readonly>
+                                <span class="fa fa-calendar-o form-control-feedback left"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+                            <label for="exposicion">Exposición</label>
+                            <div class="input-group">
+                                <input type="checkbox" class="bts-togg" name="exposicion[]"  data-on="Si" data-off="No" disabled checked/>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+                            <label for="epp">EPP</label>
+                            <div class="input-group">
+                                <input type="checkbox" class="bts-togg" name="epp[]"  data-on="Si" data-off="No" disabled/>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+                          <label for=""> </label>
+                          <div class="">
+                            <button type="button" class="btn btn-warning btn-sm">Editar</button>
+                            <button type="button" name="button" type="submit" class="btn btn-success btn-sm" disabled>Guardar</button>
+                          </div>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                          <a class="btn btn-primary btn-sm" href="{{route('ocupacional.empresa.create')}}">Agregar empresa anterior</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Servicios Ocupacionales</h2>
+                <ul class="nav navbar-right panel-toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: block;">
+
+              <div class="form-group">
+                <div class="btn-group btn-group-justified" role="group" >
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">EKG</button>
+                  </div>
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">ESPIRO</button>
+                  </div>
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">OFTALMO</button>
+                  </div>
+                </div>
+                <div class="btn-group btn-group-justified" role="group" >
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">ODONTO</button>
+                  </div>
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">MEDICINA</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-md-11 col-sm-11 col-xs-12"></div>
+                <div class="col-md-1 col-sm-1 col-xs-12">
+                  <a class="btn btn-warning btn-sm" href="{{route('ocupacional.servicios.edit')}}">Editar</a>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10 col-sm-10 col-xs-12">
+                <a href="{{route('ocupacional.index')}}" class="btn btn-danger">Regresar</a>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12"></div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <button type="button" name="button" type="submit" class="btn btn-primary">Resultados</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
 
