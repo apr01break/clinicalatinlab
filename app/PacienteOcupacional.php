@@ -15,7 +15,7 @@ class PacienteOcupacional extends Model
     protected $primaryKey = 'id';
     public $timestamps    = true;
     protected $fillable   = [
-        'paciente_id','empresa_id','ocupacion','residenciaOcupacion','tiempoResidencia','seguro','email'
+        'paciente_id','empresa_id','ocupacion','tipoEvaluacion1','tipoEvaluacion2','fechaEvaluacion','residenciaOcupacion','tiempoResidencia','seguro','email'
         ,'estadoCivil','gradoInstruccion','nroHijosVivos','nroDependientes','nombreUsuario'
     ];
     public function paciente()

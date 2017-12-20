@@ -3,7 +3,7 @@
 @section('title', 'Pacientes Ocupacionales')
 @section('title-right')
 <div>
-  <a href="{{route('pacientes.create')}}" class="btn btn-primary">Registrar paciente ocupacional</a>
+  <a href="{{route('ocupacional.create')}}" class="btn btn-primary">Registrar paciente ocupacional</a>
 </div>
 @endsection
 @section('content')
@@ -31,10 +31,10 @@
                   <thead>
                     <tr>
                       <th data-priority="1">Nombre</th>
-                      <th>Historia</th>
+                      <th>N° Historia</th>
                       <th>Empresa</th>
-                      <th>Fecha de Nacimiento</th>
-                      <th>Fecha de Registro</th>
+                      <th>Fecha de evaluación</th>
+
                       <th data-priority="2" width="1%">Acciones</th>
                     </tr>
                   </thead>
@@ -44,9 +44,9 @@
                       <td>111111</td>
                       <td>TopiTop</td>
                       <td>24/10/1997</td>
-                      <td>20/20/2016</td>
+
                       <td><a href="{{route('ocupacional.show')}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
-                          <a href="{{route('pacientes.update')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+                          
                           <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
                       </td>
                     </tr>
@@ -55,9 +55,9 @@
                       <td>222222</td>
                       <td>Ripley</td>
                       <td>24/10/1997</td>
-                      <td>20/20/2016</td>
+
                       <td><a href="{{route('ocupacional.show')}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
-                          <a href="{{route('pacientes.update')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+
                           <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
                       </td>
                     </tr>
@@ -66,9 +66,9 @@
                       <td>3333333</td>
                       <td>Redondos</td>
                       <td>24/10/1997</td>
-                      <td>20/20/2016</td>
+
                       <td><a href="{{route('ocupacional.show')}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
-                          <a href="{{route('pacientes.update')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+
                           <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
                       </td>
                     </tr>

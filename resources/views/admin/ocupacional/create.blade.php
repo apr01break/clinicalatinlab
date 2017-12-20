@@ -38,13 +38,36 @@
                     <div class="input-group input-group-sm">
                         <select class="form-control special2" style="width: 100%;" name="empresas">
                             <option value=""></option>
-                            <option value="1">111111 El meneo intenso</option>
+                            <option value="1">111111 G & H</option>
                             <option value="2">222222 Efe</option>
                             <option value="3">333333 Inversiones Chicken</option>
                         </select>
                         <span class="input-group-btn">
                             <a href="{{route('pacientes.create')}}" class="btn btn-default"><i class="fa fa-plus"></i> </a>
                         </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <label for="tipoEvaluacion1">Tipo Evaluación</label>
+                    <select class="form-control" name="">
+                      <option value="">Pre-Ocupacional</option>
+                      <option value="">Ocupacional</option>
+                    </select>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <label for="tipoEvaluacion2">Tipo Evaluación</label>
+                    <select class="form-control" name="">
+                      <option value="">Ingreso</option>
+                      <option value="">Periódico</option>
+                    </select>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <label for="fechaEvaluacion">  Fecha de evaluación</label>
+                    <div class="input-group">
+                        <input type="text" name="" class="dtp1 form-control has-feedback-left" data-date-end-date="0d">
+                        <span class="fa fa-calendar-o form-control-feedback left"></span>
                     </div>
                 </div>
             </div>
@@ -117,7 +140,7 @@
                 <div class="col-md-2 col-sm-2 col-xs-12">
                     <div class="col-md-4 col-sm-4 col-xs-12"></div>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <button type="button" name="button" type="submit" class="btn btn-primary">Continuar</button>
+                        <a href="{{route('ocupacional.empresa.create')}}" class="btn btn-primary">Continuar</a>
                     </div>
                 </div>
             </div>

@@ -17,9 +17,6 @@ class CreateDatosClinicosTable extends Migration
             $table->increments('id');
             $table->integer('paciente_ocupacional_id')->unsigned();
             $table->foreign('paciente_ocupacional_id')->references('id')->on('pacientes_ocupacionales');
-            $table->string('tipoEvaluacion1',100);
-            $table->string('tipoEvaluacion2',100);
-            $table->date('fechaEvaluacion');
             $table->integer('edad');
             $table->decimal('talla',3,2);
             $table->integer('peso');

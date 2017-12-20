@@ -11,7 +11,7 @@ class DatoClinico extends Model
     protected $primaryKey = 'id';
     public $timestamps    = true;
     protected $fillable   = [
-        'paciente_ocupacional_id','tipoEvaluacion1','tipoEvaluacion2','fechaEvaluacion','edad','talla','peso'
+        'paciente_ocupacional_id','edad','talla','peso'
         ,'imc','perAbd','frecResp','frecCard','pa','temperatura','visLejosOdSc','visLejosOdCc','visLejosOiSc'
         ,'visLejosOiCc','visCercaOdSc','visCercaOdCc','visCercaOiSc','visCercaOiCc','nombreUsuario'
     ];

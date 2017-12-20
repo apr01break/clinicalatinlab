@@ -340,16 +340,29 @@ Route::group(['prefix'=>'materiales','as'=>'materiales.'],function(){
     return view('admin.materiales.show');
 /*PACIENTE OCUPACIONAL*/
 Route::group(['prefix'=>'ocupacional','as'=>'ocupacional.'],function(){
-  Route::get('/',function(){
-    return view('admin.ocupacional.index');
-  })->name('index');
-  Route::get('create',function(){
-    return view('admin.ocupacional.create');
-  })->name('create');
-  Route::get('update',function(){
-    return view('admin.ocupacional.update');
-  })->name('update');
-  Route::get('show',function(){
-    return view('admin.ocupacional.show');
-  })->name('show');
+    Route::group(['prefix'=>'empresa','as'=>'empresa.'],function(){
+        Route::get('create',function(){
+            return view('admin.ocupacional.empresa.create');
+        })->name('create');
+    });
+    Route::group(['prefix'=>'servicios','as'=>'servicios.'],function(){
+        Route::get('create',function(){
+            return view('admin.ocupacional.servicios.create');
+        })->name('create');
+        Route::get('edit',function(){
+            return view('admin.ocupacional.servicios.edit');
+        })->name('edit');
+    });
+    Route::get('/',function(){
+        return view('admin.ocupacional.index');
+    })->name('index');
+    Route::get('create',function(){
+        return view('admin.ocupacional.create');
+    })->name('create');
+    Route::get('update',function(){
+        return view('admin.ocupacional.update');
+    })->name('update');
+    Route::get('show',function(){
+        return view('admin.ocupacional.show');
+    })->name('show');
 });
