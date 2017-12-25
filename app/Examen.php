@@ -12,7 +12,7 @@ class Examen extends Model
     protected $primaryKey = 'id';
     public $timestamps    = true;
     protected $fillable   = [
-        'servicio_id','descripcion','estado','nombreUsuario'
+        'servicio_id','descripcion','valoresNormales','estado','nombreUsuario'
     ];
     public function servicio()
     {

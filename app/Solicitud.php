@@ -14,7 +14,7 @@ class Solicitud extends Model
     protected $primaryKey = 'id';
     public $timestamps    = true;
     protected $fillable   = [
-        'paciente_id','medico_id','estado','nombreUsuario'
+        'paciente_id','servicioSolicitante','servicioEjecutante','medico_id','estado','nombreUsuario'
     ];
     public function medico()
     {

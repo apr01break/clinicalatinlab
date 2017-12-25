@@ -22,7 +22,7 @@
       <div class="x_content" style="display: block;">
         <form class="form-horizontal form-label-left" action="" method="post">
           <p class="text-muted font 13 m-b-30">
-            Bienvenido a la seccion de administracion de pacientes ocupacionales, aqui podra registrar, visualizar, actualizar o eliminar un paciente.
+            Bienvenido a la seccion de administracion de pacientes ocupacionales, aqui podra registrar, visualizar, actualizar o eliminar un paciente ocupacional.
           </p>
           <div class="dataTables_wrapper form-inline dt-bootstrap no-footer" id="datatable_wrapper">
             <div class="row">
@@ -46,7 +46,7 @@
                       <td>24/10/1997</td>
 
                       <td><a href="{{route('ocupacional.show')}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
-                          
+
                           <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
                       </td>
                     </tr>
@@ -82,7 +82,7 @@
     </div>
   </div>
 </div>
-@include('admin.pacientes.destroy')
+@include('admin.pacientes.delete')
 @endsection
 
 @section('style')

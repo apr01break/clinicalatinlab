@@ -17,6 +17,10 @@ class CreateSolicitudesTable extends Migration
             $table->increments('id');
             $table->integer('paciente_id')->unsigned();
             $table->foreign('paciente_id')->references('id')->on('pacientes');
+            $table->integer('servicioSolicitante')->unsigned();
+            $table->foreign('servicioSolicitante')->references('id')->on('areas');
+            $table->integer('servicioEjecutante')->unsigned();
+            $table->foreign('servicioEjecutante')->references('id')->on('areas');
             $table->integer('medico_id')->unsigned();
             $table->foreign('medico_id')->references('id')->on('medicos');
             $table->integer('estado');

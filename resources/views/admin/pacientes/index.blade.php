@@ -46,7 +46,7 @@
                       <td>24/10/1997</td>
                       <td>20/20/1990</td>
                       <td><a href="{{route('pacientes.show')}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
-                          <a href="{{route('pacientes.update')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+                          <a href="{{route('pacientes.edit')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
                           <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
                       </td>
                     </tr>
@@ -57,7 +57,7 @@
                       <td>24/10/1997</td>
                       <td>20/20/1990</td>
                       <td><a href="{{route('pacientes.show')}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
-                          <a href="{{route('pacientes.update')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+                          <a href="{{route('pacientes.edit')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
                           <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
                       </td>
                     </tr>
@@ -68,7 +68,7 @@
                       <td>24/10/1997</td>
                       <td>20/20/1990</td>
                       <td><a href="{{route('pacientes.show')}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
-                          <a href="{{route('pacientes.update')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+                          <a href="{{route('pacientes.edit')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
                           <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
                       </td>
                     </tr>
@@ -82,7 +82,7 @@
     </div>
   </div>
 </div>
-@include('admin.pacientes.destroy')
+@include('admin.pacientes.delete')
 @endsection
 
 @section('style')

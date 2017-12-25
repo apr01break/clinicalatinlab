@@ -3,7 +3,7 @@
 @section('title', 'Inventario')
 @section('title-right')
 <div>
-  <a href="{{route('materiales.create')}}" class="btn btn-primary">Crear Area</a>
+  <a href="{{route('inventario.create')}}" class="btn btn-primary">Registrar Producto</a>
 </div>
 @endsection
 
@@ -12,7 +12,7 @@
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
       <div class="x_title">
-        <h2>Registros de Areas de patologia Clinica</h2>
+        <h2>Registros de productos del inventario</h2>
         <ul class="nav navbar-right panel-toolbox">
           <li>
             <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -23,7 +23,7 @@
       <div class="x_content" style="display: block;">
         <form class="form-horizontal form-label-left" action="" method="post">
           <p class="text-muted font 13 m-b-30">
-            Bienvenido a la seccion de administracion de pacientes, aqui podra registrar, visualizar, actualizar o eliminar un paciente.
+            Bienvenido a la seccion de administracion del inventario, aqui podra registrar, visualizar, actualizar o eliminar un producto.
           </p>
           <div class="dataTables_wrapper form-inline dt-bootstrap no-footer" id="datatable_wrapper">
             <div class="row">
@@ -31,35 +31,41 @@
                 <table id="t_data_tables" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                   <thead>
                     <tr>
-                      <th data-priority="1">Descripcion</th>
-                      <th>Breve</th>
-                      <th>Responsable</th>
+                      <th data-priority="1">Código</th>
+                      <th>Nombre</th>
+                      <th>Descripción</th>
                       <th data-priority="2" width="1%">Acciones</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Hematologia</td>
-                      <td>Hematologia</td>
-                      <td>LIC CASTRO</td>
-                      <td><a href="{{route('areas.update')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
-                          <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
+                      <td>DH7312</td>
+                      <td>GLUCOSA</td>
+                      <td>...</td>
+                      <td>
+                        <a href="{{route('inventario.show')}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
+                        <a href="{{route('inventario.edit')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+                        <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
                       </td>
                     </tr>
                     <tr>
-                      <td>Microbiologia</td>
-                      <td>Microbiologia</td>
-                      <td>LIC CASTRO</td>
-                      <td><a href="{{route('areas.update')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
-                          <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
+                      <td>DH7312</td>
+                      <td>GLUCOSA</td>
+                      <td>...</td>
+                      <td>
+                        <a href="{{route('inventario.show')}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
+                        <a href="{{route('inventario.edit')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+                        <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
                       </td>
                     </tr>
                     <tr>
-                      <td>Genetica y biologia molecular</td>
-                      <td>Citogenetica</td>
-                      <td>LIC CASTRO</td>
-                      <td><a href="{{route('areas.update')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
-                          <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
+                      <td>DH7312</td>
+                      <td>GLUCOSA</td>
+                      <td>...</td>
+                      <td>
+                        <a href="{{route('inventario.show')}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
+                        <a href="{{route('inventario.edit')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+                        <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
                       </td>
                     </tr>
                   </tbody>
@@ -72,7 +78,7 @@
     </div>
   </div>
 </div>
-@include('admin.areas.destroy')
+@include('admin.inventario.delete')
 @endsection
 
 @section('style')

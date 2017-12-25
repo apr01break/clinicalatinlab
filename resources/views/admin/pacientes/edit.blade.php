@@ -15,7 +15,7 @@
         <div class="clearfix"></div>
       </div>
       <div class="x_content" style="display: block;">
-        <form class="form-horizontal form-label-left" action="" id="frm-create" method="post">
+        <form class="form-horizontal form-label-left" action="" method="post">
           <p class="text-muted font 13 m-b-30">
             Bienvenido a la seccion de registro de empresas, asegurate de ingresar los datos correctamente antes de aceptar.
           </p>
@@ -44,7 +44,7 @@
                 <label for="sexo">Sexo</label>
                 <div class="input-group">
                   <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-default">
+                    <label class="btn btn-default active">
                       <input type="radio" name="sexo" value="masculino"> Masculino
                     </label>
                     <label class="btn btn-default">

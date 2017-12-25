@@ -1,18 +1,12 @@
 @extends('admin.layouts.admin')
 
-@section('title', 'Visualizar registro paciente')
-@section('title-right')
-<div>
-  <label for="num_historia" class="control-label">Numero Historia</label>
-  <input type="text" name="" value="" placeholder="Numero de Historia" class="form-control">
-</div>
-@endsection
+@section('title', 'Pacientes')
 @section('content')
 <div class="row">
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
       <div class="x_title">
-        <h2>Visualizar paciente</h2>
+        <h2>Registrar paciente</h2>
         <ul class="nav navbar-right panel-toolbox">
           <li>
             <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -23,171 +17,156 @@
       <div class="x_content" style="display: block;">
         <form class="form-horizontal form-label-left" action="" method="post">
           <p class="text-muted font 13 m-b-30">
-            Bienvenido a la seccion de visualizacion de pacientes.
+            Bienvenido a la seccion de registro de empresas, asegurate de ingresar los datos correctamente antes de aceptar.
           </p>
+
           <div class="form-group">
-            <label for="nombres" class="control-label col-md-3 col-sm-3 col-xs-12">Nombres</label>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <input type="text" name="" value="" id="nombres" required="required" class="form-control col-md-7 col-xs-12">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <label for="prNombre">Primer Nombre</label>
+                <input readonly type="text" class="form-control" name="nombre">
             </div>
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <label for="sgNombre">Segundo Nombre</label>
+                <input readonly type="text" class="form-control" name="nombre">
+            </div>
+            <div class="col-md-3 col-sm-2 col-xs-12">
+                <label for="aPaterno">Apellido Paterno</label>
+                <input readonly type="text" name="abreviatura" class="form-control" required>
+            </div>
+            <div class="col-md-3 col-sm-5 col-xs-12">
+                <label for="aMaterno">Apellido Materno</label>
+                <input readonly type="text" name="giroNegocio" class="form-control" required>
+            </div>
+
           </div>
           <div class="form-group">
-            <label for="apellido_paterno" class="control-label col-md-3 col-sm-3 col-xs-12">Apellido Paterno</label>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <input type="text" name="" value="" id="apellido_paterno" required="required" class="form-control col-md-7 col-xs-12">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="apellido_paterno" class="control-label col-md-3 col-sm-3 col-xs-12">Apellido Materno</label>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <input type="text" name="" value="" id="apellido_materno" required="required" class="form-control col-md-7 col-xs-12">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="fecha_nacimiento" class="control-label col-md-3 col-sm-3 col-xs-12">Fecha de Nacimiento</label>
             <div class="col-md-3 col-sm-3 col-xs-12">
-              <input type="text" name="" id="dtp1" class="form-control has-feedback-left" data-date-end-date="0d">
-              <span class="fa fa-calendar-o form-control-feedback left"></span>
+                <label for="sexo">Sexo</label>
+                <div class="input-group">
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default active" disabled>
+                      <input type="radio" name="sexo" > Masculino
+                    </label>
+                    <label class="btn btn-default" disabled>
+                      <input type="radio" name="sexo" > Femenino
+                    </label>
+                  </div>
+                </div>
             </div>
-            <div class="col-md-1 col-sm-1 col-xs-12">
-                <input type="number" name="" class="form-control has-feedback-right">
-                <span class="form-control-feedback right">AA</span>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                <div class="input-group">
+                  <input readonly type="text" name="fechaNacimiento" class="dtp1 form-control has-feedback-left" data-date-end-date="0d">
+                  <span class="fa fa-calendar-o form-control-feedback left"></span>
+                </div>
             </div>
-            <div class="col-md-1 col-sm-1 col-xs-12">
-                <input type="number" name="" class="form-control has-feedback-right">
-                <span class="form-control-feedback right">MM</span>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label for="lugarNacimiento_id">Lugar de Nacimiento</label>
+                <select class="form-control special2" style="width: 100%;" name="lugarNacimiento_id" disabled>
+                    <option value=""></option>
+                    <option value="1">Huacho</option>
+                    <option value="2">Lima</option>
+                </select>
             </div>
-            <div class="col-md-1 col-sm-1 col-xs-12">
-                <input type="number" name="" class="form-control has-feedback-right">
-                <span class="form-control-feedback right">DD</span>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="sexo" class="control-label col-md-3 col-sm-3 col-xs-12">Sexo</label>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default active">
-                  <input type="radio" name="sexo"  autocomplete="off" checked> Masculino
-                </label>
-                <label class="btn btn-default">
-                  <input type="radio" name="sexo"  autocomplete="off"> Femenino
-                </label>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+              <label for="discapacitado">Discapacitado</label>
+              <div class="input-group">
+                <input disabled type="checkbox" class="bts-togg" name="discapacitado"  data-on="Si" data-off="No"/>
               </div>
             </div>
+
           </div>
           <div class="form-group">
-            <label for="lugar_nacimiento" class="control-label col-md-3 col-sm-3 col-xs-12">Lugar de nacimiento</label>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <!--autocomplete-->
-              <input type="text" name="" value="" id="lugar_nacimiento" required="required" class="form-control col-md-7 col-xs-12">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="documento_identidad" class="control-label col-md-3 col-sm-3 col-xs-12">Documento de identidad</label>
             <div class="col-md-2 col-sm-2 col-xs-12">
-              <select class="form-control" name="">
-                <option value="">DNI</option>
-                <option value="">Pasaporte</option>
-              </select>
+                <label for="tipoDocum">Tipo de documento</label>
+                <select class="form-control" name="tipoDocum" disabled>
+                  <option value="">DNI</option>
+                  <option value="">Pasaporte</option>
+                </select>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12" class="form-control">
-              <input type="text" name="" value="" class="form-control" id="documento_identidad">
+            <div class="col-md-2 col-sm-2 col-xs-12">
+                <label for="nroDocum">Numero de documento</label>
+                <input readonly type="text" name="nroDocum" class="form-control" value="">
             </div>
-          </div>
-          <div class="separator"></div>
-          <div class="form-group">
-            <label for="direccion" class="control-label col-md-3 col-sm-3 col-xs-12">Direccion</label>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <!--autocomplete-->
-              <input type="text" name="" value="" id="direccion" required="required" class="form-control col-md-7 col-xs-12">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="direccion" class="control-label col-md-3 col-sm-3 col-xs-12">Especificacion de direccion</label>
-            <div class="col-md-1 col-sm-1 col-xs-12">
-              <input type="number" name="" value="" id="direccion" required="required" class="form-control col-md-7 col-xs-12" placeholder="Nro">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <label for="direccion">Dirección</label>
+                <input readonly type="text" name="direccion" class="form-control" value="">
             </div>
             <div class="col-md-1 col-sm-1 col-xs-12">
-              <input type="number" name="" value="" id="direccion" required="required" class="form-control col-md-7 col-xs-12" placeholder="Interior">
+                <label for="number">Número</label>
+                <input readonly type="text" name="nroDirecc" class="form-control" value="">
             </div>
             <div class="col-md-1 col-sm-1 col-xs-12">
-              <input type="number" name="" value="" id="direccion" required="required" class="form-control col-md-7 col-xs-12" placeholder="Mza">
+                <label for="intDirecc">Interior</label>
+                <input readonly type="number" name="intDirecc" class="form-control" value="">
             </div>
             <div class="col-md-1 col-sm-1 col-xs-12">
-              <input type="number" name="" value="" id="direccion" required="required" class="form-control col-md-7 col-xs-12" placeholder="Lote">
+                <label for="mzaDirecc">Manzana</label>
+                <input readonly type="text" name="mzaDirecc" class="form-control" value="">
+            </div>
+            <div class="col-md-1 col-sm-1 col-xs-12">
+                <label for="lotDirecc">Lote</label>
+                <input readonly type="number" name="lotDirecc" class="form-control" value="">
             </div>
           </div>
-          <div class="separator"></div>
           <div class="form-group">
-            <label for="localidad" class="control-label col-md-3 col-sm-3 col-xs-12">Localidad</label>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label for="nroTelefono">N° Teléfono</label>
+                  <input readonly type="text" name="nroTelefono" class="form-control" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label for="nroCelular">N° Celular</label>
+                <input readonly type="text" name="nroCelular" class="form-control" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label for="nroTrabajo">N° Trabajo</label>
+                <input readonly type="text" name="nroTrabajo" class="form-control" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label for="residencia_id">Lugar de Residencia</label>
+                <select class="form-control special2" style="width: 100%;" name="lugarNacimiento_id" disabled>
+                    <option value=""></option>
+                    <option value="1">Huacho</option>
+                    <option value="2">Lima</option>
+                </select>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label for="tipoLocali">Tipo de localidad</label>
+                <input readonly type="text" name="tipoLocali" class="form-control" value="">
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <label for="nombLocali">Nombre de localidad</label>
+                <input readonly type="text" name="nombLocali" class="form-control" value="">
+            </div>
             <div class="col-md-2 col-sm-2 col-xs-12">
-              <select class="form-control" name="">
-                <option value="">DNI</option>
-                <option value="">Pasaporte</option>
-              </select>
+                <label for="tipoFinanciador">Tipo de Financiador</label>
+                <select class="form-control" name="tipoFinanciador" disabled>
+                  <option value="">Convenio</option>
+                  <option value="">Particular</option>
+                </select>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12" class="form-control">
-              <input type="text" name="" value="" class="form-control" id="localidad">
+            <div class="col-md-1 col-sm-1 col-xs-12">
+              <label for="veterinaria">Veterinaria</label>
+              <div class="input-group">
+                <input type="checkbox" class="bts-togg" name="veterinaria"  data-on="Si" data-off="No"/>
+              </div>
+            </div>
+
+          </div>
+          <div class="form-group">
+            <div class="col-md-10 col-sm-10 col-xs-12">
+              <label for="observacion">Observación</label>
+              <textarea name="observacion" rows="2" cols="80" class="form-control" style="resize:none;" readonly></textarea>
             </div>
           </div>
           <div class="form-group">
-            <label for="direccion" class="control-label col-md-3 col-sm-3 col-xs-12">Distrito</label>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <!--autocomplete-->
-              <input type="text" name="" value="" id="distrito" required="required" class="form-control col-md-7 col-xs-12">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="contactos" class="control-label col-md-3 col-sm-3 col-xs-12">Contactos</label>
-            <div class="col-md-2 col-sm-2 col-xs-12">
-              <input type="text" name="" value="" id="distrito" required="required" class="form-control col-md-7 col-xs-12" placeholder="telefono">
-                <span class="fa fa-phone form-control-feedback right"></span>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-12">
-              <input type="text" name="" value="" id="distrito" required="required" class="form-control col-md-7 col-xs-12" placeholder="movil">
-              <span class="fa fa-mobile form-control-feedback right"></span>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-12">
-              <input type="text" name="" value="" id="distrito" required="required" class="form-control col-md-7 col-xs-12" placeholder="trabajo">
-              <span class="fa fa-phone-square form-control-feedback right"></span>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="tipo_financiador" class="control-label col-md-3 col-sm-3 col-xs-12">Tipo de financiador</label>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <select class="form-control col-md-7 col-xs-12" name="">
-                <option value="">Convenio</option>
-                <option value="">Particular</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="direccion" class="control-label col-md-3 col-sm-3 col-xs-12">Observación</label>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <textarea name="name" rows="8" cols="80" class="form-control" style="resize:none;"></textarea>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-md-3 col-sm-3 col-xs-12"></div>
-            <div class="col-md-3 col-sm-3 col-xs-12 checkbox">
-                <div class="icheckbox_flat-green" style="position: relative;">
-                  <input type="checkbox" class="flat" checked="checked" style="position: absolute; opacity: 0;">
-                </div>
-                Veterinaria
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-12 checkbox">
-                <div class="icheckbox_flat-green" style="position: relative;">
-                  <input type="checkbox" class="flat" checked="checked" style="position: absolute; opacity: 0;">
-                </div>
-                Discapacitado
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-md-3 col-sm-3 col-xs-12"></div>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <button type="button" name="button" class="btn btn-primary btn-sm">Actualizar</button>
-              <a href="{{route('pacientes.index')}}" class="btn btn-danger btn-sm">Cancelar</a>
-            </div>
+              <div class="col-md-10 col-sm-10 col-xs-12">
+                  <a href="{{route('pacientes.index')}}" class="btn btn-success">Regresar</a>
+              </div>
+
           </div>
         </form>
       </div>
@@ -199,21 +178,48 @@
 @section('style')
 <!--nprogress-->
 <link rel="stylesheet" href="{{asset('css/nprogress.css')}}">
+<!--select2-->
+<link rel="stylesheet" href="{{asset('css/select2.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/select2-bootstrap.min.css')}}">
 <!--daterangepicker-->
 <link rel="stylesheet" href="{{asset('css/bootstrap-datepicker.min.css')}}">
-<!--iCheck-->
-<link rel="stylesheet" href="{{asset('css/green.css')}}">
 <!--Custom theme styles-->
 <link rel="stylesheet" href="{{asset('css/custom.min.css')}}">
+<!--bootstrap toggle-->
+<link rel="stylesheet" href="{{asset('css/bootstrap-toggle.min.css')}}">
 @endsection
 
 @section('script')
 <!--nprogress-->
 <script type="text/javascript" src="{{asset('js/nprogress.js')}}"></script>
+<!--select2-->
+<script type="text/javascript" src="{{asset('js/select2.min.js')}}"></script>
+<!--bootstrap switch-->
+<script type="text/javascript" src="{{asset('js/bootstrap-toggle.min.js')}}"></script>
 <!--bootstrap-datepicker-->
 <script type="text/javascript" src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
-<!--iCheck-->
-<script type="text/javascript" src="{{asset('js/icheck.min.js')}}"></script>
 <!--Custom theme styles-->
 <script type="text/javascript" src="{{asset('js/custom.min.js')}}"></script>
+<script type="text/javascript">
+function alphaOnly(event) {var inputValue = event.charCode;if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)){event.preventDefault();}
+};
+$(document).ready(function() {
+  function selection(){
+    $('.special2').select2({
+      placeholder: 'Seleccione uno...',
+      theme: "bootstrap"
+    });
+  }
+  function toggler(){
+    $('.bts-togg').bootstrapToggle();
+  }
+  function date(){
+    $('.dtp1').datepicker();
+  }
+  date();
+  toggler();
+  selection();
+
+});
+</script>
 @endsection

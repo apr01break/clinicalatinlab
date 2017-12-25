@@ -23,7 +23,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <label for="pacientes">Paciente</label>
                     <div class="input-group input-group-sm">
-                        <select class="form-control special2" style="width: 100%;" name="pacientes">
+                        <select class="form-control special2" style="width: 100%;" name="paciente_id" required>
                             <option value=""></option>
                             <option value="1">111111 Alexis Jesus Peralta Holyoak</option>
                             <option value="2">333333 minaya</option>
@@ -36,7 +36,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <label for="empresas">Empresa</label>
                     <div class="input-group input-group-sm">
-                        <select class="form-control special2" style="width: 100%;" name="empresas">
+                        <select class="form-control special2" style="width: 100%;" name="empresa_id" required>
                             <option value=""></option>
                             <option value="1">111111 G & H</option>
                             <option value="2">222222 Efe</option>
@@ -51,14 +51,14 @@
             <div class="form-group">
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <label for="tipoEvaluacion1">Tipo Evaluación</label>
-                    <select class="form-control" name="">
+                    <select class="form-control" name="tipoEvaluacion1">
                       <option value="">Pre-Ocupacional</option>
                       <option value="">Ocupacional</option>
                     </select>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <label for="tipoEvaluacion2">Tipo Evaluación</label>
-                    <select class="form-control" name="">
+                    <select class="form-control" name="tipoEvaluacion2">
                       <option value="">Ingreso</option>
                       <option value="">Periódico</option>
                     </select>
@@ -66,29 +66,29 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <label for="fechaEvaluacion">  Fecha de evaluación</label>
                     <div class="input-group">
-                        <input type="text" name="" class="dtp1 form-control has-feedback-left" data-date-end-date="0d">
+                        <input type="text" name="fechaEvaluacion" class="dtp1 form-control has-feedback-left" data-date-end-date="0d">
                         <span class="fa fa-calendar-o form-control-feedback left"></span>
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-md-4 col-sm-4 col-xs-12">
-                    <label for="empresas">Ocupacion</label>
-                    <input type="text" name="" class="form-control" value="">
+                    <label for="ocupacion">Ocupacion</label>
+                    <input type="text" name="ocupacion" class="form-control" value="">
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-12">
                   <label for="residenciaOcupacion">Residencia en el trabajo</label>
                   <div class="input-group">
-                    <input type="checkbox" class="bts-togg" name="hc[]"  data-on="Si" data-off="No"/>
+                    <input type="checkbox" id="cbResidencia" class="bts-togg" name="residenciaOcupacion"  data-on="Si" data-off="No"/>
                   </div>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <label for="tiempoResidencia">Tiempo de residencia</label>
-                    <input type="text" class="form-control" name="" value="" disabled>
+                    <input type="text" id="tmpResidencia" class="form-control" name="tiempoResidencia" value="" disabled>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <label for="seguro">Seguro</label>
-                    <select class="form-control" name="">
+                    <select class="form-control" name="seguro">
                       <option value="">EsSalud</option>
                       <option value="">EPS</option>
                       <option value="">SCTR</option>
@@ -99,11 +99,11 @@
             <div class="form-group">
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <label for="email">Email</label>
-                    <input type="text" class="form-control" name="" value="">
+                    <input type="text" class="form-control" name="email" value="">
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <label for="estadoCivil">Estado civil</label>
-                    <select class="form-control" name="">
+                    <select class="form-control" name="estadoCivil">
                       <option value="">Soltero</option>
                       <option value="">Casado</option>
                       <option value="">Conviviente</option>
@@ -113,7 +113,7 @@
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <label for="gradoInstruccion">Grado de instrucción</label>
-                    <select class="form-control" name="">
+                    <select class="form-control" name="gradoInstruccion">
                       <option value="">Primaria incompleta</option>
                       <option value="">Primaria completa</option>
                       <option value="">Secundaria incompleta</option>
@@ -126,11 +126,11 @@
             <div class="form-group">
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <label for="nroHijosVivos">N° hijos vivos</label>
-                    <input type="number" class="form-control" name="" value="" min="0">
+                    <input type="number" class="form-control" name="nroHijosVivos" value="" min="0">
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <label for="nroDependientes">N° dependientes</label>
-                    <input type="number" class="form-control" name="" value="" min="0">
+                    <input type="number" class="form-control" name="nroDependientes" value="" min="0">
                 </div>
             </div>
             <div class="form-group">
@@ -179,7 +179,6 @@ function alphaOnly(event) {var inputValue = event.charCode;if(!(inputValue >= 65
 };
 $(document).ready(function() {
 var wrapper         = $(".input_fields_wrap"); //Fields wrapper
-var add_button      = $(".add_field_button"); //Add button ID
 //for select2
 function selection(){
   $('.special2').select2({
@@ -187,22 +186,25 @@ function selection(){
     theme: "bootstrap"
   });
 }
+$('#cbResidencia').on('change',function(){
+  if($(this).prop('checked')==true){
+    $('#tmpResidencia').prop('disabled',false);
+  }else{
+    $('#tmpResidencia').val('');
+    $('#tmpResidencia').prop('disabled',true);
+  }
+})
+function date(){
+  $('.dtp1').datepicker();
+}
+date();
 //bootstrap toggle
 function toggler(){
   $('.bts-togg').bootstrapToggle();
 }
 selection();
 toggler();
-//for add more items
-$(add_button).click(function(e){ //on add input button click
-   e.preventDefault();
-   $(wrapper).append('<div class="form-group"> <div class="col-md-4 col-sm-4 col-xs-12"> <label for="servicio">Servicio</label> <select class="form-control special2" style="width: 100%;" name="servicio[]"> <option value=""></option> <option value="1">Hematologia</option> <option value="2">Hemograma</option> </select> </div><div class="col-md-1 col-sm-1 col-xs-12"> <label for="unit">Valor unit.</label> <input type="number" name="unit[]" value="" class="form-control" disabled> </div><div class="col-md-1 col-sm-1 col-xs-12"> <label for="cantidad">Cantidad</label> <input type="number" name="cantidad[]" value="" class="form-control"> </div><div class="col-md-1 col-sm-1 col-xs-12"> <label for="subtotal">Sub total</label> <input type="number" name="subtotal[]" value="" class="form-control" disabled> </div><div class="col-md-1 col-sm-1 col-xs-12"> <label for="descuento">Descuento</label> <input type="number" name="descuento[]" value="" class="form-control"> </div><div class="col-md-1 col-sm-1 col-xs-12"> <label for="total">Total</label> <input type="number" name="total[]" value="" class="form-control" disabled> </div><div class="col-md-1 col-sm-1 col-xs-12"> <label for="total"> </label> <button type="button" name="button" class="form-control btn btn-danger fa fa-trash remove_field"></button> </div></div>');
-   selection();
-   toggler();
-});
-$(wrapper).on("click",".remove_field", function(e){ //user click on remove text
-   e.preventDefault(); $(this).closest('div[class^="form-group"]').remove();
-})
+
 });
 </script>
 @endsection

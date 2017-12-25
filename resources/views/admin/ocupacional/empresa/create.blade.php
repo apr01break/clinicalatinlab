@@ -23,7 +23,7 @@
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <label for="pacientes">Paciente</label>
                             <div class="input-group input-group-sm">
-                                <select class="form-control special2" style="width: 100%;" name="pacientes" disabled>
+                                <select class="form-control special2" style="width: 100%;" name="paciente_id" disabled>
                                     <option value=""></option>
                                     <option value="1" selected>111111 Alexis Jesus Peralta Holyoak</option>
                                     <option value="2">333333 minaya</option>
@@ -36,7 +36,7 @@
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <label for="fechaEvaluacion">  Fecha de evaluación</label>
                             <div class="input-group">
-                                <input type="text" name="" value="17/08/2017" class="form-control has-feedback-left" data-date-end-date="0d" readonly>
+                                <input type="text" name="fechaEvaluacion" value="17/08/2017" class="form-control has-feedback-left" data-date-end-date="0d" readonly>
                                 <span class="fa fa-calendar-o form-control-feedback left"></span>
                             </div>
                         </div>
@@ -50,29 +50,29 @@
                         <div class="form-group">
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <label for="nombre">Nombre de la empresa</label>
-                                <input type="text" class="form-control" name="" value="">
+                                <input type="text" class="form-control" name="nombre[]" value="">
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <label for="areaTrabajo">Área de trabajo</label>
-                                <input type="text" class="form-control" name="" value="">
+                                <input type="text" class="form-control" name="areaTrabajo[]" value="">
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <label for="ocupacion">Ocupación</label>
-                                <input type="text" class="form-control" name="" value="">
+                                <input type="text" class="form-control" name="ocupacion[]" value="">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-3 col-sm-3 col-xs-12">
-                                <label for="fecha">Fecha de inicio</label>
+                                <label for="fechaInicio">Fecha de inicio</label>
                                 <div class="input-group">
-                                    <input type="text" name="" class="dtp1 form-control has-feedback-left" data-date-today-highlight="true" >
+                                    <input type="text" name="fechaInicio[]" class="dtp1 form-control has-feedback-left" data-date-today-highlight="true" >
                                     <span class="fa fa-calendar-o form-control-feedback left"></span>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-3 col-xs-12">
                                 <label for="fechaFin">Fecha de término</label>
                                 <div class="input-group">
-                                    <input type="text" name="" class="dtp1 form-control has-feedback-left" data-date-today-highlight="true" >
+                                    <input type="text" name="fechaFin[]" class="dtp1 form-control has-feedback-left" data-date-today-highlight="true" >
                                     <span class="fa fa-calendar-o form-control-feedback left"></span>
                                 </div>
                             </div>
@@ -159,6 +159,10 @@ $(document).ready(function() {
         theme: "bootstrap"
       });
     }
+    function date(){
+      $('.dtp1').datepicker();
+    }
+    date();
     //bootstrap toggle
     function toggler(){
       $('.bts-togg').bootstrapToggle();
@@ -170,22 +174,22 @@ $(document).ready(function() {
        e.preventDefault();
        $(wrapper).append('<div class="separator"></div><div class="form-group">'
  +'<div class="col-md-4 col-sm-4 col-xs-12"><label for="nombre">Nombre de la empresa</label>'
- +'<input type="text" class="form-control" name="" value="">'
+ +'<input type="text" class="form-control" name="nombre[]" value="">'
  +'</div><div class="col-md-4 col-sm-4 col-xs-12">'
- +'<label for="areaTrabajo">Área de trabajo</label><input type="text" class="form-control" name="" value=""></div>'
+ +'<label for="areaTrabajo">Área de trabajo</label><input type="text" class="form-control" name="areaTrabajo[]" value=""></div>'
  +'<div class="col-md-4 col-sm-4 col-xs-12"><label for="ocupacion">Ocupación</label>'
- +'<input type="text" class="form-control" name="" value="">'
+ +'<input type="text" class="form-control" name="ocupacion[]" value="">'
  +'</div></div>'
  +'<div class="form-group">'
- +'<div class="col-md-3 col-sm-3 col-xs-12"><label for="fecha">Fecha de inicio</label>'
+ +'<div class="col-md-3 col-sm-3 col-xs-12"><label for="fechaInicio">Fecha de inicio</label>'
  +'<div class="input-group">'
- +'             <input type="text" name="fecha" class="form-control has-feedback-left" data-date-today-highlight="true" >'
+ +'             <input type="text" name="fechaInicio[]" class="form-control has-feedback-left" data-date-today-highlight="true" >'
  +'<span class="fa fa-calendar-o form-control-feedback left"></span>'
  +'</div>'
  +'</div><div class="col-md-3 col-sm-3 col-xs-12">'
  +'<label for="fechaFin">Fecha de término</label>'
  +' <div class="input-group">'
- +'             <input type="text" name="fecha" class="form-control has-feedback-left" data-date-today-highlight="true" >'
+ +'             <input type="text" name="fechaFin[]" class="form-control has-feedback-left" data-date-today-highlight="true" >'
  +'      <span class="fa fa-calendar-o form-control-feedback left"></span>'
  +'        </div></div><div class="col-md-2 col-sm-2 col-xs-12">'
  +'       <label for="exposicion">Exposición</label><div class="input-group"><input type="checkbox" class="bts-togg" name="exposicion[]"  data-on="Si" data-off="No"/>'
