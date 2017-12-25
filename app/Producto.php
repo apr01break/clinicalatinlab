@@ -11,8 +11,8 @@ class Producto extends Model
     protected $primaryKey = 'id';
     public $timestamps    = true;
     protected $fillable   = [
-        'nombre','codigo','descripcion','unidad_medida_id','fechaProduccion','fechaVencimiento','fechaInicio'
-        ,'fechaFin','estado','nombreUsuario'
+        'nombre','codigo','descripcion','unidad_medida_id','fechaProduccion','fechaVencimiento'
+        ,'fechaInicio','fechaFin','estado','nombreUsuario'
     ];
     public function unidadMedida()
     {

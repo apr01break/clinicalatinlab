@@ -97,12 +97,12 @@
                 </a>
                 <ul class="nav child_menu">
                   <li>
-                    <a href="javascript:;">
+                    <a href="{{route('medicos.index')}}">
                       Medicos
                     </a>
                   </li>
                   <li>
-                    <a href="javascript:;">
+                    <a href="{{route('empresas.index')}}">
                       Empresas
                     </a>
                   </li>
@@ -143,7 +143,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="{{route('inventarios.index')}}">
+                    <a href="{{route('inventario.index')}}">
                       Inventario
                     </a>
                   </li>

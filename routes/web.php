@@ -41,9 +41,9 @@ Route::group(['prefix'=>'pacientes','as'=>'pacientes.'],function(){
   Route::get('create',function(){
     return view('admin.pacientes.create');
   })->name('create');
-  Route::get('update',function(){
-    return view('admin.pacientes.update');
-  })->name('update');
+  Route::get('edit',function(){
+    return view('admin.pacientes.edit');
+  })->name('edit');
   Route::get('show',function(){
     return view('admin.pacientes.show');
   })->name('show');
@@ -367,4 +367,44 @@ Route::group(['prefix'=>'ocupacional','as'=>'ocupacional.'],function(){
     Route::get('show',function(){
         return view('admin.ocupacional.show');
     })->name('show');
+});
+/*MEDICOS*/
+Route::group(['prefix'=>'medicos','as'=>'medicos.'],function(){
+  Route::get('/',function(){
+      return view('admin.medicos.index');
+  })->name('index');
+  Route::get('create',function(){
+      return view('admin.medicos.create');
+  })->name('create');
+  Route::get('edit',function(){
+      return view('admin.medicos.edit');
+  })->name('edit');
+});
+Route::group(['prefix'=>'inventario','as'=>'inventario.'],function(){
+  Route::get('/',function(){
+      return view('admin.inventario.index');
+  })->name('index');
+  Route::get('create',function(){
+      return view('admin.inventario.create');
+  })->name('create');
+  Route::get('edit',function(){
+      return view('admin.inventario.edit');
+  })->name('edit');
+  Route::get('show',function(){
+      return view('admin.inventario.show');
+  })->name('show');
+});
+Route::group(['prefix'=>'empresas','as'=>'empresas.'],function(){
+  Route::get('/',function(){
+      return view('admin.empresas.index');
+  })->name('index');
+  Route::get('create',function(){
+      return view('admin.empresas.create');
+  })->name('create');
+  Route::get('edit',function(){
+      return view('admin.empresas.edit');
+  })->name('edit');
+  Route::get('show',function(){
+      return view('admin.empresas.show');
+  })->name('show');
 });
