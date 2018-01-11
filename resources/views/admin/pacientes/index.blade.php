@@ -34,44 +34,23 @@
                       <th>Historia</th>
                       <th>DNI</th>
                       <th>Fecha de Nacimiento</th>
-                      <th>Fecha de Registro</th>
                       <th data-priority="2" width="1%">Acciones</th>
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach($pacientes as $paciente)
                     <tr>
-                      <td>Alexis Jesus Peralta Holyoak</td>
-                      <td>111111</td>
-                      <td>73237155</td>
-                      <td>24/10/1997</td>
-                      <td>20/20/1990</td>
-                      <td><a href="{{route('pacientes.show')}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
-                          <a href="{{route('pacientes.edit')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
-                          <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
+                      <td>{{$paciente->persona->aPaterno}} {{$paciente->persona->aMaterno}} {{$paciente->persona->prNombre}} {{$paciente->persona->sgNombre}}</td>
+                      <td>{{$paciente->numeroHistoria}}</td>
+                      <td>{{$paciente->persona->nroDocum}}</td>
+                      <td>{{$paciente->persona->fechaNacimiento}}</td>
+                      <td><a href="{{route('pacientes.show', $paciente->id)}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
+                          <a href="{{route('pacientes.edit', $paciente->id)}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+                          <a href="#" class="btn btn-danger btn-xs btn-delete" data-toggle="modal" data-target="#bs-delete-modal-lg" data-id="{{$paciente->id}}"><i class="fa fa-close"></i></a>
                       </td>
                     </tr>
-                    <tr>
-                      <td>TITO NIEVES</td>
-                      <td>222222</td>
-                      <td>73237155</td>
-                      <td>24/10/1997</td>
-                      <td>20/20/1990</td>
-                      <td><a href="{{route('pacientes.show')}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
-                          <a href="{{route('pacientes.edit')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
-                          <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>JUANA LA CUBANA</td>
-                      <td>3333333</td>
-                      <td>73237155</td>
-                      <td>24/10/1997</td>
-                      <td>20/20/1990</td>
-                      <td><a href="{{route('pacientes.show')}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
-                          <a href="{{route('pacientes.edit')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
-                          <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
-                      </td>
-                    </tr>
+                    @endforeach
+
                   </tbody>
                 </table>
               </div>
@@ -99,6 +78,7 @@
 @section('script')
 <!--DataTable-->
 <script type="text/javascript" src="{{asset('js/jquery.dataTables.min.js')}}"></script>
+
 <script type="text/javascript" src="{{asset('js/dataTables.bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/dataTables.responsive.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/responsive.bootstrap.min.js')}}"></script>
@@ -114,8 +94,31 @@
 <script type="text/javascript" src="{{asset('js/nprogress.js')}}"></script>
 <!--Custom theme styles-->
 <script type="text/javascript" src="{{asset('js/custom.min.js')}}"></script>
+
 <script type="text/javascript">
-  $(document).ready(function(){$("#t_data_tables").DataTable({
+  $(document).ready(function(){
+    $.ajaxSetup({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
+    $(document).on('click', '.btn-delete',function(){
+        let idPaciente = $(this).data('id');
+        let url='pacientes/delete/'+idPaciente;
+        $.ajax({
+          dataType : 'json',
+          method : 'post',
+          url : url,
+          data : {},
+          success : function(data){
+            $('#mdl-delete p[name="nombre"]').text(data.persona.aPaterno+" "+data.persona.aMaterno+" "+data.persona.prNombre+" "+data.persona.sgNombre);
+            $('#mdl-delete p[name="dni"]').text(data.persona.nroDocum);
+            $('#mdl-delete p[name="historia"]').text(data.numeroHistoria);
+            $('#mdl-delete').attr('action','pacientes/destroy/'+idPaciente);
+          }
+        });
+    });
+    $("#t_data_tables").DataTable({
     dom: 'Bfrtip',
     buttons:[{
       extend: 'pdf',

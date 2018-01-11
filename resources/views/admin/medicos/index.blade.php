@@ -37,36 +37,18 @@
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach($medicos as $medico)
                     <tr>
-                      <td>Alberto Augusto Gutierrez Frato</td>
+                      <td>{{$medico->nombre}}</td>
 
 
                       <td>
 
-                        <a href="{{route('medicos.edit')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+                        <a href="{{route('medicos.edit', $medico->id)}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
                         <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
                       </td>
                     </tr>
-                    <tr>
-                      <td>Tania Flabia Ramon Lopez</td>
-
-
-                      <td>
-
-                        <a href="{{route('medicos.edit')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
-                        <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Pablo Tulio Verdaña Suarez</td>
-
-
-                      <td>
-
-                        <a href="{{route('medicos.edit')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
-                        <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
-                      </td>
-                    </tr>
+                    @endforeach
                   </tbody>
                 </table>
               </div>

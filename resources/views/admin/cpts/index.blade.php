@@ -36,24 +36,14 @@
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach($cpts as $cpt)
                     <tr>
-                      <td>HDL COLESTEROL</td>
-                      <td><a href="{{route('cpts.update')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+                      <td>{{$cpt->descripcion}}</td>
+                      <td><a href="{{route('cpts.edit',$cpt->id)}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
                           <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
                       </td>
                     </tr>
-                    <tr>
-                      <td>APLICACION DE ARMAZON EN HALO</td>
-                      <td><a href="{{route('cpts.update')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
-                          <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>CATERIZACION</td>
-                      <td><a href="{{route('cpts.update')}}" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
-                          <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#bs-delete-modal-lg"><i class="fa fa-close"></i></a>
-                      </td>
-                    </tr>
+                    @endforeach
                   </tbody>
                 </table>
               </div>

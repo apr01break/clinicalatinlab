@@ -15,20 +15,21 @@
         <div class="clearfix"></div>
       </div>
       <div class="x_content" style="display: block;">
-        <form class="form-horizontal form-label-left" action="" method="post">
+        <form class="form-horizontal form-label-left" action="{{route('cpts.store')}}" method="post">
           <p class="text-muted font 13 m-b-30">
             Bienvenido a la seccion de registro de cpts, asegurate de ingresar los datos correctamente antes de aceptar.
           </p>
+          {{ csrf_field() }}
           <div class="form-group">
             <label for="nombres" class="control-label col-md-3 col-sm-3 col-xs-12">Descripcion</label>
             <div class="col-md-6 col-sm-6 col-xs-12">
-              <input type="text" name="" value="" id="nombres" required="required" class="form-control col-md-7 col-xs-12" onkeypress="return alphaOnly(event);">
+              <input type="text" name="descripcion" required="required" class="form-control col-md-7 col-xs-12" onkeypress="return alphaOnly(event);">
             </div>
           </div>
           <div class="form-group">
             <div class="col-md-3 col-sm-3 col-xs-12"></div>
             <div class="col-md-6 col-sm-6 col-xs-12">
-              <button type="button" name="button" type="submit" class="btn btn-primary btn-sm">Registrar</button>
+              <button type="submit" class="btn btn-primary btn-sm">Registrar</button>
               <a href="{{route('areas.index')}}" class="btn btn-danger btn-sm">Cancelar</a>
             </div>
           </div>

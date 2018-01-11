@@ -35,18 +35,14 @@ Route::get('prueba',function(){
 });
 /*PACIENTE*/
 Route::group(['prefix'=>'pacientes','as'=>'pacientes.'],function(){
-  Route::get('/',function(){
-    return view('admin.pacientes.index');
-  })->name('index');
-  Route::get('create',function(){
-    return view('admin.pacientes.create');
-  })->name('create');
-  Route::get('edit',function(){
-    return view('admin.pacientes.edit');
-  })->name('edit');
-  Route::get('show',function(){
-    return view('admin.pacientes.show');
-  })->name('show');
+  Route::get('/', 'PacientesController@index')->name('index');
+  Route::get('create', 'PacientesController@create')->name('create');
+  Route::post('store', 'PacientesController@store')->name('store');
+  Route::get('edit/{id}', 'PacientesController@edit')->name('edit');
+  Route::post('update/{id}', 'PacientesController@update')->name('update');
+  Route::post('delete/{id}', 'PacientesController@delete')->name('delete');
+  Route::post('destroy/{id}', 'PacientesController@destroy')->name('destroy');
+  Route::get('show/{id}', 'PacientesController@show')->name('show');
 });
 /*TARIFARIO*/
 Route::group(['prefix'=>'tarifario','as'=>'tarifario.'],function(){
@@ -121,17 +117,7 @@ Route::group(['prefix'=>'subclases','as'=>'subclases.'],function(){
   })->name('show');
 });
 /*SUBCLASES*/
-Route::group(['prefix'=>'cpts','as'=>'cpts.'],function(){
-  Route::get('/',function(){
-    return view('admin.cpts.index');
-  })->name('index');
-  Route::get('create',function(){
-    return view('admin.cpts.create');
-  })->name('create');
-  Route::get('update',function(){
-    return view('admin.cpts.update');
-  })->name('update');
-});
+
 /*BALANCE*/
 Route::group(['prefix'=>'balances','as'=>'balances.'],function(){
   Route::get('/','BalanceController@index')->name('index');
@@ -192,18 +178,11 @@ Route::group(['prefix'=>'comprobantes','as'=>'comprobantes.'],function(){
 });
 /*CPTS*/
 Route::group(['prefix'=>'cpts','as'=>'cpts.'],function(){
-  Route::get('/',function(){
-    return view('admin.cpts.index');
-  })->name('index');
-  Route::get('create',function(){
-    return view('admin.cpts.create');
-  })->name('create');
-  Route::get('update',function(){
-    return view('admin.cpts.update');
-  })->name('update');
-  Route::get('show',function(){
-    return view('admin.cpts.show');
-  })->name('show');
+  Route::get('/','CptsController@index')->name('index');
+  Route::get('create','CptsController@create')->name('create');
+  Route::post('store','CptsController@store')->name('store');
+  Route::get('edit/{id}','CptsController@edit')->name('edit');
+  Route::post('update/{id}','CptsController@update')->name('update');
 });
 /*INCENTIVO*/
 Route::group(['prefix'=>'incentivos','as'=>'incentivos.'],function(){
@@ -370,15 +349,13 @@ Route::group(['prefix'=>'ocupacional','as'=>'ocupacional.'],function(){
 });
 /*MEDICOS*/
 Route::group(['prefix'=>'medicos','as'=>'medicos.'],function(){
-  Route::get('/',function(){
-      return view('admin.medicos.index');
-  })->name('index');
-  Route::get('create',function(){
-      return view('admin.medicos.create');
-  })->name('create');
-  Route::get('edit',function(){
-      return view('admin.medicos.edit');
-  })->name('edit');
+  Route::get('/','MedicosController@index')->name('index');
+  Route::get('create','MedicosController@create')->name('create');
+  Route::get('edit/{id}','MedicosController@edit')->name('edit');
+  Route::post('store', 'MedicosController@store')->name('store');
+  Route::post('update/{id}', 'MedicosController@update')->name('update');
+  Route::post('delete/{id}', 'MedicosController@delete')->name('delete');
+  Route::post('destroy/{id}', 'MedicosController@destroy')->name('destroy');
 });
 Route::group(['prefix'=>'inventario','as'=>'inventario.'],function(){
   Route::get('/',function(){
